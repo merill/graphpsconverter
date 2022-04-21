@@ -1,10 +1,25 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Azure AD PowerShell to Graph PowerShell Conversion Helper";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <form method="post">
+        <label asp-for="SourceScript" class="control-label">Source script:</label>  
+        <textarea asp-for="SourceScript" class="form-control"></textarea>
+        <input type="submit" value="Convert" asp-page-handler="Submit"/>
+        <p>Shown below is the converted code as a sample.</p>
+
+        <pre>
+            <code>
+                @Html.DisplayName(Model.ConvertedScript)
+            </code>
+        </pre>
+        
+
+    </form>
 </div>
