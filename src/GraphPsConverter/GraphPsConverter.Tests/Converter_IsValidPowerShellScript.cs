@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using GraphPsConverter.Core;
 
 namespace GraphPsConverter.Tests
@@ -66,6 +65,29 @@ Get-PnPApp -Scope Site
             var expected = "Get-MgUser -All";
             var actual = _converter.ConvertToGraphPowerShell(aadPs);
             Assert.AreEqual(expected, actual.ConvertedCommands[0].ConvertedScript);
+        }
+
+        [TestMethod]
+        public void IsMapped_Get_AzureAdUser_GraphCmd_ReturnMatch()
+        {
+            var aadCmdName = "Get-AzureADUser";
+            var expected = "Get-MgUser";
+
+            var actual = CommandMappingHelper.GetGraphCommand(aadCmdName);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IsMapped_Get_AzureAdUser_GraphParam_ReturnMatch()
+        {
+            var aadCmdName = "Get-AzureADUser";
+            var aadParamName = "-All";
+            var expected = "All";
+
+            var actual = CommandMappingHelper.GetGraphParam(aadCmdName, aadParamName);
+
+            Assert.AreEqual(expected, actual);
         }
     }
 

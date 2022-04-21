@@ -1,5 +1,4 @@
 ﻿using GraphPsConverter.Core.Model;
-using System.Diagnostics;
 using System.Management.Automation.Language;
 using System.Runtime.CompilerServices;
 
@@ -24,70 +23,11 @@ namespace GraphPsConverter.Core
 
         private void GenerateGraphPsScript(ParsedScript parsedScript)
         {
+            //Read through the script and create a tree of all the AADcommands that were found.
             foreach (var aadCmd in parsedScript.Commands)
             {
-                //var prms = aadCmd.FindAll(prm => prm is CommandParameterAst, true).Cast<CommandParameterAst>();
-                List<Ast> children = aadCmd.FindAll(e => e.Parent == aadCmd, true).ToList();
-                var convertedCommand = new ConvertedCommand();
+                var convertedCommand = new ConvertedCommand(aadCmd);
                 _parsedScript.ConvertedCommands.Add(convertedCommand);
-                convertedCommand.SourceCommandAst = aadCmd;
-                convertedCommand.CommandMapping = new CommandMapping();
-                convertedCommand.CommandMapping.AadName = children[0].ToString();
-                for (var index = 1; index < children.Count; index++)
-                {
-                    var child = children[index];
-
-                    if (child is CommandParameterAst)
-                    {
-                        convertedCommand.CommandMapping.ParamMappings.Add(
-                            new ParamMapping()
-                            {
-                                AadName = child.ToString()
-                            });
-                    }
-                    else //Most probably a parameter value, let's set it as value for last parameter
-                    {
-                        convertedCommand.CommandMapping.ParamMappings.Last().Value = child.ToString();
-                    }
-                }
-
-                var globalMappings = CommandMappingHelper.GetCommandMappings();
-
-                var aadCommandMap = (from p in globalMappings
-                                     where p.AadName.Equals(convertedCommand.CommandMapping.AadName)
-                                     select p).FirstOrDefault();
-
-                if (aadCommandMap != null)
-                {
-                    convertedCommand.CommandMapping.GraphName = aadCommandMap.GraphName;
-                    foreach (var param in convertedCommand.CommandMapping.ParamMappings)
-                    {
-                        var aadParam = (from p in aadCommandMap.ParamMappings where p.AadName.Equals(param.AadName) select p).FirstOrDefault();
-                        if (aadParam != null)
-                        {
-                            param.GraphName = aadParam.GraphName;
-                        }
-                    }
-
-                    convertedCommand.ConvertedScript = convertedCommand.CommandMapping.GraphName;
-                    foreach (var param in convertedCommand.CommandMapping.ParamMappings)
-                    {
-                        convertedCommand.ConvertedScript += " " + param.GraphName;
-                        if (param.Value != null)
-                        {
-                            convertedCommand.ConvertedScript += " " + param.Value;
-                        }
-                    }
-                }
-                Debug.WriteLine(convertedCommand);
-                //foreach (var child in children)
-                //{
-                //    Debug.WriteLine(child.ToString() + " " + child.GetType());
-                //}
-                //foreach (var prm in prms)
-                //{
-                //    Debug.WriteLine(prm.ParameterName);
-                //}
             }
         }
 
@@ -133,7 +73,7 @@ namespace GraphPsConverter.Core
             {
 
                 //check if the script starts with a command
-                if (cmd.GetCommandName().Contains("-AzureAD", StringComparison.InvariantCultureIgnoreCase))
+                if (CommandMappingHelper.IsAadCommand(cmd.GetCommandName()))
                 {
                     aadCmds.Add(cmd);
                 }
