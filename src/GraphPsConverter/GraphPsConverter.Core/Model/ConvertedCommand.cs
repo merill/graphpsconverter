@@ -51,8 +51,15 @@ namespace GraphPsConverter.Core.Model
         public string? GetConvertedScript(List<Ast> children)
         {
             if (!HasGraphCommand) return null;
+            var convertedScript = new StringBuilder();
 
-            var convertedScript = new StringBuilder(GraphCmdName);
+            var commandMap = CommandMappingHelper.GetCommandMap(AadCmdName);
+
+            if(!string.IsNullOrEmpty(commandMap.GraphModuleName))
+            {
+                convertedScript.AppendFormat("Import-Module {0}\r\n", commandMap.GraphModuleName);
+            }
+            convertedScript.Append(GraphCmdName);
 
             for (var index = 1; index < children.Count; index++)
             {
@@ -60,8 +67,10 @@ namespace GraphPsConverter.Core.Model
 
                 if (child is CommandParameterAst)
                 {
-                    var aadParamName = child.ToString();
-                    var graphParamName = CommandMappingHelper.GetGraphParam(AadCmdName, aadParamName);
+                    var aadParamName = child.ToString();                    
+                    var paramMap = CommandMappingHelper.GetParamMap(AadCmdName, aadParamName);
+
+                    var graphParamName = paramMap.GraphParamName;
 
                     if (!string.IsNullOrEmpty(graphParamName))
                     {
@@ -87,7 +96,7 @@ namespace GraphPsConverter.Core.Model
             List<Ast> children = CommandAst.FindAll(e => e.Parent == CommandAst, true).ToList();
 
             AadCmdName = children[0].ToString();
-            CommandMap = CommandMappingHelper.GetCommand(AadCmdName);
+            CommandMap = CommandMappingHelper.GetCommandMap(AadCmdName);
             GraphCmdName = CommandMap.GraphCmdName;
 
             HasGraphCommand = !string.IsNullOrEmpty(GraphCmdName);

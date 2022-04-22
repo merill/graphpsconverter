@@ -85,9 +85,9 @@ Get-PnPApp -Scope Site
             var aadParamName = "-All";
             var expected = "All";
 
-            var actual = CommandMappingHelper.GetGraphParam(aadCmdName, aadParamName);
+            var actual = CommandMappingHelper.GetParamMap(aadCmdName, aadParamName);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual.GraphParamName);
         }
     }
 

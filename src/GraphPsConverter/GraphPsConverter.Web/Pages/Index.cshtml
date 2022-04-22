@@ -1,11 +1,11 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Graph PowerShell";
+    ViewData["Title"] = "";
 }
 
 <div>
-    <h1 class="display-4">Graph PowerShell Conversion Analyzer</h1>
+    <h2 class="display-4">Graph PowerShell Conversion Analyzer</h2>
     <p>Get help converting your MSOnline and Azure AD PowerShell script to Graph PowerShell.</p>
     <p>Paste in your MSOnline and Azure AD PowerShell scripts and click Analyze.</p>
 
@@ -14,6 +14,7 @@
         <div id="monSourceScript" style="width:800px;height:300px;border:1px solid grey"></div>
 
         <textarea id="sourceScriptText" asp-for="SourceScript" class="form-control" style="display:none;"></textarea>
+        <p></p>
         <p>
             <input type="submit" value="Analyze" asp-page-handler="Submit" />
         </p>
@@ -24,16 +25,16 @@
             {
                 if (Model.ParsedScript != null && Model.ParsedScript.IsValid)
                 {
-                    <h2>Graph PowerShell Analysis</h2>
-                    
+                    <h3>Graph PowerShell Analysis</h3>
+                    <p>The following Azure AD PowerShell commands were found. Use the guide below to convert your script to use Graph PowerShell.</p>
                     @foreach (var cmd in Model.ParsedScript.ConvertedCommands)
                     {
-                        <h3>@cmd.AadCmdName</h3>
+                        <h4>@cmd.AadCmdName</h4>
                         <p>
-                        <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a> @Html.Raw("=>") <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a>
+                            <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a> @Html.Raw("=>") <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a>
                         </p>
                         <p>
-                        <code>@cmd.ConvertedScript</code>
+                        <pre><code class="language-powershell">@cmd.ConvertedScript</code></pre>
                         </p>
                     }
                 }
@@ -43,10 +44,10 @@
                     if (Model.ParsedScript != null && Model.ParsedScript.Errors.Count > 0)
                     {
                         <ul>
-                        @foreach (var err in Model.ParsedScript.Errors)
-                        {
-                            <li>@err.ErrorCode - @err.Message</li>
-                        }
+                            @foreach (var err in Model.ParsedScript.Errors)
+                            {
+                                <li>@err.ErrorCode - @err.Message</li>
+                            }
                         </ul>
                     }
                 }
@@ -61,9 +62,13 @@
     $(document).ready(function () {
         require.config({ paths: { 'vs': '/lib/vs' } });
         editor = monaco.editor.create(document.getElementById('monSourceScript'), {
-            value: "",
-            language: 'powershell'
+            language: 'powershell',
+            minimap: {
+                enabled: false
+            }
         });
+        editor.setValue($('#sourceScriptText').val());
+        editor.focus();
     })
 
     $("#convertForm").submit(function(event) {

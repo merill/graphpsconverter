@@ -24,7 +24,7 @@ namespace GraphPsConverter.Core
             return _commandMaps.ContainsKey(GetCmdKey(aadCmdName));
         }
 
-        public static CommandMap GetCommand(string aadCmdName)
+        public static CommandMap GetCommandMap(string aadCmdName)
         {
             Init();
             var aadCmdKey = GetCmdKey(aadCmdName);
@@ -40,11 +40,11 @@ namespace GraphPsConverter.Core
 
         public static string GetGraphCommandName(string aadCmdName)
         {
-            var cmd = GetCommand(aadCmdName);
+            var cmd = GetCommandMap(aadCmdName);
             return cmd?.GraphCmdName;
         }
 
-        public static string GetGraphParam(string aadCmdName, string aadParamName)
+        public static ParamMap GetParamMap(string aadCmdName, string aadParamName)
         {
             Init();
 
@@ -52,7 +52,7 @@ namespace GraphPsConverter.Core
             var paramKey = GetParamKey(aadCmdName, paramName);
             if (_paramMaps.ContainsKey(paramKey))
             {
-                return _paramMaps[paramKey].GraphParamName;
+                return _paramMaps[paramKey];
             }
             else
             {
