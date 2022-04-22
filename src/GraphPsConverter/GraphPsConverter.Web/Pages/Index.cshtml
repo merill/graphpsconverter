@@ -34,12 +34,13 @@ $proxies = Get-AzureADApplicationProxyApplication -All
                 if (Model.ParsedScript != null && Model.ParsedScript.IsValid)
                 {
                     <h3>Graph PowerShell Analysis</h3>
-                    <p>The following Azure AD PowerShell commands were found in your. Use the guide below to convert your script to use Graph PowerShell.</p>
+                    <p>The following Azure AD PowerShell commands were found in your script. Use the guide below to convert your script to use Graph PowerShell.</p>
                     @foreach (var cmd in Model.ParsedScript.ConvertedCommands)
                     {
-                        <h4>@cmd.AadCmdName</h4>
+                        <hr />
                         @if (cmd.HasGraphCommand)
                         {
+                            <h4>@cmd.GraphCmdName @Html.Raw("<-") @cmd.AadCmdName</h4>
                             <p>
                                 <pre><code class="language-powershell">@cmd.ConvertedScript</code></pre>
                             </p>
@@ -48,14 +49,23 @@ $proxies = Get-AzureADApplicationProxyApplication -All
                             @if (cmd.HasGraphCommand)
                             {
                                 var communitySampleUri = "https://github.com/orgs/msgraph/discussions?discussions_q=" + cmd.GraphCmdName;
-                                <li>Graph PowerShell Command: <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a></li>
-                                <li>Sample Graph PowerShell Scripts: <a href="@communitySampleUri" target="_blank">View community contributed scripts for @cmd.GraphCmdDisplayName</a></li>
+                                <li><a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a> @Html.Raw("<-") <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a></li>
+                                <li><a href="@communitySampleUri" target="_blank">View community contributed scripts for @cmd.GraphCmdDisplayName</a></li>
+                                <li>Permission Scopes for @cmd.GraphCmdName (least to highest privilege)<br/>
+                                    @foreach(var scope in cmd.CommandMap.GraphCmdScope.Split(";"))
+                                    {
+                                        var href = string.Format("https://graphpermissions.merill.net/permission/" + scope + ".html");
+                                        <a target="_blank" href="@href">@scope</a> 
+                                    }
+                                </li>
                             }
                             else
                             {
-                                <li>Graph PowerShell Command: <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a></li>
+                            <h4>@cmd.AadCmdName</h4>
+                                <li><a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a></li>
+                                <li><a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a></li>
                             }
-                            <li>Azure AD PowerShell Command: <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a></li>
+                            
 
                             
                         </ul>

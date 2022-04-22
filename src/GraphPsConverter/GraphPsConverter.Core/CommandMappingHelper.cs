@@ -74,7 +74,9 @@ namespace GraphPsConverter.Core
                     AadCmdName = fields[0],
                     AadModuleName = fields[1],
                     GraphCmdName = fields[2],
-                    GraphModuleName = fields[3]
+                    GraphModuleName = fields[3],
+                    GraphCmdScope = fields[4],
+                    GraphUri = fields[5],
                 };
                 commandMaps.Add(GetCmdKey(commandMap.AadCmdName), commandMap);
             }

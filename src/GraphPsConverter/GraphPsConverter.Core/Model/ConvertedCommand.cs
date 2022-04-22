@@ -17,6 +17,16 @@ namespace GraphPsConverter.Core.Model
         public string AadCmdName { get; private set; }
         public string GraphCmdName { get; private set; }
 
+        public string GraphCmdScope
+        {
+            get
+            {
+                var scopes = CommandMap.GraphCmdScope;
+                if(string.IsNullOrEmpty(scopes)) return null;
+
+                return scopes.Split(";")[0];
+            }
+        }
         public string AadCmdDocLink { 
             get 
             {
@@ -59,6 +69,12 @@ namespace GraphPsConverter.Core.Model
             {
                 convertedScript.AppendFormat("Import-Module {0}\r\n", commandMap.GraphModuleName);
             }
+
+            if (!string.IsNullOrEmpty(GraphCmdScope))
+            {
+                convertedScript.AppendFormat("Connect-Graph {0}\r\n", GraphCmdScope);
+            }
+
             convertedScript.Append(GraphCmdName);
 
             for (var index = 1; index < children.Count; index++)

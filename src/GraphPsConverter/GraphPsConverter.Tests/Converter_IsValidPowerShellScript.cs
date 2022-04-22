@@ -63,6 +63,7 @@ Get-PnPApp -Scope Site
         {
             var aadPs = "Get-AzureADUser -All";
             var expected = @"Import-Module Microsoft.Graph.Users
+Connect-Graph DeviceManagementApps.Read.All
 Get-MgUser -All";
             var actual = _converter.ConvertToGraphPowerShell(aadPs);
             Assert.AreEqual(expected, actual.ConvertedCommands[0].ConvertedScript);
@@ -96,7 +97,8 @@ Get-MgUser -All";
         {
             //If we don't have param mapping exclude the values from the converted script
             var aadPs = "Set-MsolUserPassword -UserPrincipalName 'davidchew@consoso.com' -NewPassword 'pa$$word'";
-            var expected = @"Reset-MgUserAuthenticationMethodPassword";
+            var expected = @"Connect-Graph UserAuthenticationMethod.ReadWrite.All
+Reset-MgUserAuthenticationMethodPassword";
             var actual = _converter.ConvertToGraphPowerShell(aadPs);
             Assert.AreEqual(expected, actual.ConvertedCommands[0].ConvertedScript);
         }
