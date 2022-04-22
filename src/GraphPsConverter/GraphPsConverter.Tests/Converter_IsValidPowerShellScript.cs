@@ -73,7 +73,7 @@ Get-PnPApp -Scope Site
             var aadCmdName = "Get-AzureADUser";
             var expected = "Get-MgUser";
 
-            var actual = CommandMappingHelper.GetGraphCommand(aadCmdName);
+            var actual = CommandMappingHelper.GetGraphCommandName(aadCmdName);
 
             Assert.AreEqual(expected, actual);
         }

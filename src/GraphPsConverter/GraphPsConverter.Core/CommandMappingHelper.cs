@@ -24,19 +24,24 @@ namespace GraphPsConverter.Core
             return _commandMaps.ContainsKey(GetCmdKey(aadCmdName));
         }
 
-        public static string GetGraphCommand(string aadCmdName)
+        public static CommandMap GetCommand(string aadCmdName)
         {
             Init();
-
             var aadCmdKey = GetCmdKey(aadCmdName);
             if (_commandMaps.ContainsKey(aadCmdKey))
             {
-                return _commandMaps[aadCmdKey].GraphCmdName;
+                return _commandMaps[aadCmdKey];
             }
             else
             {
                 return null;
             }
+        }
+
+        public static string GetGraphCommandName(string aadCmdName)
+        {
+            var cmd = GetCommand(aadCmdName);
+            return cmd?.GraphCmdName;
         }
 
         public static string GetGraphParam(string aadCmdName, string aadParamName)
@@ -67,7 +72,9 @@ namespace GraphPsConverter.Core
                 var commandMap = new CommandMap()
                 {
                     AadCmdName = fields[0],
-                    GraphCmdName = fields[1]
+                    AadModuleName = fields[1],
+                    GraphCmdName = fields[2],
+                    GraphModuleName = fields[3]
                 };
                 commandMaps.Add(GetCmdKey(commandMap.AadCmdName), commandMap);
             }
@@ -85,9 +92,11 @@ namespace GraphPsConverter.Core
                 var paramMap = new ParamMap()
                 {
                     AadCmdName = fields[0],
-                    GraphCmdName = fields[1],
-                    AadParamName = fields[2],
-                    GraphParamName = fields[3]
+                    AadModuleName= fields[1],
+                    GraphCmdName = fields[2],
+                    GraphModuleName= fields[3],
+                    AadParamName = fields[4],
+                    GraphParamName = fields[5]
                 };
                 paramMaps.Add(GetParamKey(paramMap.AadCmdName, paramMap.AadParamName), paramMap);
             }
