@@ -37,7 +37,7 @@ namespace GraphPsConverter.Core.Model
         {
             get
             {
-                return HasGraphCommand ? GraphCmdName : "This command is not yet available in Microsoft Graph";
+                return HasGraphCommand ? GraphCmdName : $"A Graph PowerShell command for {AadCmdName} is not yet available.";
             }
         }
         public ConvertedCommand(CommandAst sourceCommandAst)
@@ -80,8 +80,11 @@ namespace GraphPsConverter.Core.Model
                     while (index + 1 < children.Count && children[index + 1] is not CommandParameterAst)
                     {
                         index++;
-                        var paramValue = children[index].ToString();
-                        convertedScript.AppendFormat(" {0}", paramValue);
+                        if (!string.IsNullOrEmpty(graphParamName)) //Don't include param values if we don't have a corresponding param in Graph
+                        {
+                            var paramValue = children[index].ToString();
+                            convertedScript.AppendFormat(" {0}", paramValue);
+                        }
                     }
                 }
             }

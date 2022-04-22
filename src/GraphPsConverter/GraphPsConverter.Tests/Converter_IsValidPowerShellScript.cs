@@ -62,7 +62,8 @@ Get-PnPApp -Scope Site
         public void IsValid_GetAzureAdUser_All_ReturnMatch()
         {
             var aadPs = "Get-AzureADUser -All";
-            var expected = "Get-MgUser -All";
+            var expected = @"Import-Module Microsoft.Graph.Users
+Get-MgUser -All";
             var actual = _converter.ConvertToGraphPowerShell(aadPs);
             Assert.AreEqual(expected, actual.ConvertedCommands[0].ConvertedScript);
         }
@@ -71,7 +72,7 @@ Get-PnPApp -Scope Site
         public void IsMapped_Get_AzureAdUser_GraphCmd_ReturnMatch()
         {
             var aadCmdName = "Get-AzureADUser";
-            var expected = "Get-MgUser";
+            var expected = @"Get-MgUser";
 
             var actual = CommandMappingHelper.GetGraphCommandName(aadCmdName);
 
@@ -88,6 +89,16 @@ Get-PnPApp -Scope Site
             var actual = CommandMappingHelper.GetParamMap(aadCmdName, aadParamName);
 
             Assert.AreEqual(expected, actual.GraphParamName);
+        }
+
+        [TestMethod]
+        public void IsValid_UnmappedParametersRemoved_ReturnMatch()
+        {
+            //If we don't have param mapping exclude the values from the converted script
+            var aadPs = "Set-MsolUserPassword -UserPrincipalName 'davidchew@consoso.com' -NewPassword 'pa$$word'";
+            var expected = @"Reset-MgUserAuthenticationMethodPassword";
+            var actual = _converter.ConvertToGraphPowerShell(aadPs);
+            Assert.AreEqual(expected, actual.ConvertedCommands[0].ConvertedScript);
         }
     }
 

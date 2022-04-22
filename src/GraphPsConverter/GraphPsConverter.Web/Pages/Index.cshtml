@@ -8,12 +8,20 @@
     <h2 class="display-4">Graph PowerShell Conversion Analyzer</h2>
     <p>Get help converting your MSOnline and Azure AD PowerShell script to Graph PowerShell.</p>
     <p>Paste in your MSOnline and Azure AD PowerShell scripts and click Analyze.</p>
+    <p>Need some sample code to try things out? <a href="#" onclick="insertSampleCode()">Click here</a> to insert some sample Azure AD PowerShell code.</p>
 
     <form method="post" id="convertForm">
 
-        <div id="monSourceScript" style="width:800px;height:300px;border:1px solid grey"></div>
+        <div id="monSourceScript" style="height:300px;border:1px solid grey"></div>
 
-        <textarea id="sourceScriptText" asp-for="SourceScript" class="form-control" style="display:none;"></textarea>
+        <textarea id="sourceScriptText" asp-for="SourceScript" style="display:none;"></textarea>
+        <textarea id="sampleScript" style="display:none;">
+$user = Get-AzureADUser -Filter "userPrincipalName eq 'jondoe@contoso.com'"
+New-AzureADUser -DisplayName "New User" -PasswordProfile $PasswordProfile -UserPrincipalName "NewUser@contoso.com" -AccountEnabled $true -MailNickName "Newuser"
+Set-MsolUserPassword -UserPrincipalName 'davidchew@consoso.com' -NewPassword 'pa$$word'
+$proxies = Get-AzureADApplicationProxyApplication -All
+
+</textarea>
         <p></p>
         <p>
             <input type="submit" value="Analyze" asp-page-handler="Submit" />
@@ -26,27 +34,45 @@
                 if (Model.ParsedScript != null && Model.ParsedScript.IsValid)
                 {
                     <h3>Graph PowerShell Analysis</h3>
-                    <p>The following Azure AD PowerShell commands were found. Use the guide below to convert your script to use Graph PowerShell.</p>
+                    <p>The following Azure AD PowerShell commands were found in your. Use the guide below to convert your script to use Graph PowerShell.</p>
                     @foreach (var cmd in Model.ParsedScript.ConvertedCommands)
                     {
                         <h4>@cmd.AadCmdName</h4>
+                        @if (cmd.HasGraphCommand)
+                        {
+                            <p>
+                                <pre><code class="language-powershell">@cmd.ConvertedScript</code></pre>
+                            </p>
+                        }
+                        <ul>
+                            @if (cmd.HasGraphCommand)
+                            {
+                                var communitySampleUri = "https://github.com/orgs/msgraph/discussions?discussions_q=" + cmd.GraphCmdName;
+                                <li>Graph PowerShell Command: <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a></li>
+                                <li>Sample Graph PowerShell Scripts: <a href="@communitySampleUri" target="_blank">View community contributed scripts for @cmd.GraphCmdDisplayName</a></li>
+                            }
+                            else
+                            {
+                                <li>Graph PowerShell Command: <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a></li>
+                            }
+                            <li>Azure AD PowerShell Command: <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a></li>
+
+                            
+                        </ul>
                         <p>
-                            <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a> @Html.Raw("=>") <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a>
-                        </p>
-                        <p>
-                        <pre><code class="language-powershell">@cmd.ConvertedScript</code></pre>
+                             
                         </p>
                     }
                 }
                 else
                 {
-                    <p>There were some errors converting.</p>
+                    <p>There were some errors when running the analyzer.</p>
                     if (Model.ParsedScript != null && Model.ParsedScript.Errors.Count > 0)
                     {
-                        <ul>
+                        <ul style="color:red">
                             @foreach (var err in Model.ParsedScript.Errors)
                             {
-                                <li>@err.ErrorCode - @err.Message</li>
+                                <li>@err.Message</li>
                             }
                         </ul>
                     }
@@ -63,6 +89,7 @@
         require.config({ paths: { 'vs': '/lib/vs' } });
         editor = monaco.editor.create(document.getElementById('monSourceScript'), {
             language: 'powershell',
+            theme: "vs-dark",
             minimap: {
                 enabled: false
             }
@@ -74,5 +101,10 @@
     $("#convertForm").submit(function(event) {
         $('#sourceScriptText').val(editor.getValue());
     });
+
+    function insertSampleCode(){
+        editor.setValue($('#sampleScript').val());
+        editor.focus();
+    }
 </script>
 }

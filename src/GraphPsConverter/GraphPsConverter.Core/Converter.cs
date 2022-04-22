@@ -36,31 +36,43 @@ namespace GraphPsConverter.Core
             Token[] tokens;
             ParseError[] parseErrors;
             List<CommandAst> aadCmds = null;
-            var ast = Parser.ParseInput(sourceScript, out tokens, out parseErrors);
 
-            if (parseErrors == null || parseErrors.Length == 0)
+            if (string.IsNullOrEmpty(sourceScript))
             {
-                aadCmds = GetAzureAdCommandsInScript(ast);
-                if (aadCmds.Count > 0)
-                {
-                }
-                else
-                {
-                    _parsedScript.Errors.Add(new ConverterParseError()
-                    {
-                        ErrorCode = "GPS03",
-                        Message = String.Format("The script did not contain any Azure AD PowerShell commands.")
-                    });
-                }
-
+                _parsedScript.Errors.Add(GetErrorNoAadPowerShellCommands());
             }
             else
             {
-                LoadParseErrors(parseErrors);
+                var ast = Parser.ParseInput(sourceScript, out tokens, out parseErrors);
+
+                if (parseErrors == null || parseErrors.Length == 0)
+                {
+                    aadCmds = GetAzureAdCommandsInScript(ast);
+                    if (aadCmds.Count > 0)
+                    {
+                    }
+                    else
+                    {
+                        _parsedScript.Errors.Add(GetErrorNoAadPowerShellCommands());
+                    }
+                }
+                else
+                {
+                    LoadParseErrors(parseErrors);
+                }
             }
 
             _parsedScript.IsValid = _parsedScript.Errors.Count == 0;
             _parsedScript.Commands = aadCmds;
+        }
+
+        private static ConverterParseError GetErrorNoAadPowerShellCommands()
+        {
+            return new ConverterParseError()
+            {
+                ErrorCode = "GPS03",
+                Message = String.Format("The script did not contain any Azure AD PowerShell commands.")
+            };
         }
 
         private static List<CommandAst> GetAzureAdCommandsInScript(ScriptBlockAst ast)
