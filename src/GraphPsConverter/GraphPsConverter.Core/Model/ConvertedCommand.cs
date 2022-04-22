@@ -17,6 +17,8 @@ namespace GraphPsConverter.Core.Model
         public string AadCmdName { get; private set; }
         public string GraphCmdName { get; private set; }
 
+        public string GraphApiUri { get; private set; }
+        public string GraphApiDocUri { get; private set; }
         public string GraphCmdScope
         {
             get
@@ -42,6 +44,7 @@ namespace GraphPsConverter.Core.Model
                     : "https://docs.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map";
             }
         }
+
 
         public string GraphCmdDisplayName
         {
@@ -119,6 +122,8 @@ namespace GraphPsConverter.Core.Model
             GraphCmdName = CommandMap.GraphCmdName;
 
             HasGraphCommand = !string.IsNullOrEmpty(GraphCmdName);
+            GraphApiUri = CommandMap.GraphUri;
+            GraphApiDocUri = CommandMappingHelper.GetGraphApiDocUri(AadCmdName);
             return children;
         }
     }

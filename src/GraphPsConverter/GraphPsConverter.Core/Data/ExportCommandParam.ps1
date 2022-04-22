@@ -43,7 +43,7 @@ $allCmdMapHash.GetEnumerator() | foreach{ if($docCmdMapHash.ContainsKey($_.Name)
 $allCmdMapHash.GetEnumerator() | foreach{ $graphCmdName = $_.Value.GraphCmdName; if($graphCmdName -ne ''){ $graphCmd = Get-Command $graphCmdName -ErrorAction SilentlyContinue; if ( $graphCmd -eq $null ) {Write-Host $graphCmdName "was not found in Graph PowerShell module"} else {$_.Value.GraphModuleName=$graphCmd.Source} } }
 
 #Populate Graph scope
-$allCmdMapHash.GetEnumerator() | foreach{ $graphCmdName = $_.Value.GraphCmdName; if($graphCmdName -ne ''){ $graphCmd = Find-MgGraphCommand -Command $graphCmdName -ErrorAction SilentlyContinue; if ( $graphCmd -eq $null ) {Write-Host $graphCmdName "was not found in Graph PowerShell module"} else {$_.Value.GraphCmdScope=($graphCmd[0].Permissions | select -ExpandProperty Name) -join ";"; $_.Value.GraphUri=$graphCmd[0].URI} } }
+$allCmdMapHash.GetEnumerator() | foreach{ $graphCmdName = $_.Value.GraphCmdName; if($graphCmdName -ne ''){ $graphCmd = Find-MgGraphCommand -Command $graphCmdName -ErrorAction SilentlyContinue; if ( $graphCmd -eq $null ) {Write-Host $graphCmdName "was not found in Graph PowerShell module"} else {$_.Value.GraphCmdScope=($graphCmd[0].Permissions | select -ExpandProperty Name) -join ";"; $_.Value.GraphUri=($graphCmd[0].Method + " " + $graphCmd[0].URI)} } }
 
 
 #check for items in doc that are not in the PowerShell objects (most probably a typo in the doc that needs to be fixed)

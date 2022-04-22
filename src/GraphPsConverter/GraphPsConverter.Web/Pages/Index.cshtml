@@ -50,8 +50,20 @@ $proxies = Get-AzureADApplicationProxyApplication -All
                             {
                                 var communitySampleUri = "https://github.com/orgs/msgraph/discussions?discussions_q=" + cmd.GraphCmdName;
                                 <li><a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a> @Html.Raw("<-") <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a></li>
+                                @if(!string.IsNullOrEmpty(cmd.GraphApiUri))
+                                {
+                                    @if (!string.IsNullOrEmpty(cmd.GraphApiDocUri))
+                                    {
+                                        <li>Graph API: <a href="@cmd.GraphApiDocUri" target="_blank">@cmd.GraphApiUri</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li>Graph API: @cmd.GraphApiUri</li>
+                                    }
+                                    
+                                }
                                 <li><a href="@communitySampleUri" target="_blank">View community contributed scripts for @cmd.GraphCmdDisplayName</a></li>
-                                <li>Permission Scopes for @cmd.GraphCmdName (least to highest privilege)<br/>
+                                <li>Permission Scopes for @cmd.GraphCmdName (least to highest privilege):<br/>
                                     @foreach(var scope in cmd.CommandMap.GraphCmdScope.Split(";"))
                                     {
                                         var href = string.Format("https://graphpermissions.merill.net/permission/" + scope + ".html");

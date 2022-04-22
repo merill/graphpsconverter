@@ -1,5 +1,8 @@
 ﻿using GraphPsConverter.Core.Model;
 using Microsoft.VisualBasic.FileIO;
+using System.Collections.Specialized;
+using System.Net;
+using System.Text.RegularExpressions;
 
 namespace GraphPsConverter.Core
 {
@@ -7,14 +10,61 @@ namespace GraphPsConverter.Core
     {
         private static Dictionary<string, CommandMap> _commandMaps;
         private static Dictionary<string, ParamMap> _paramMaps;
-
+        private static Dictionary<string, string> _graphDocUri;
         public static void Init()
         {
             if(_commandMaps == null || _paramMaps == null) //Load if it is first time
             {
                 _commandMaps = GetCommandMap();
                 _paramMaps = GetParamMap();
+                LoadPermissionMap();
             }
+        }
+
+        private static void LoadPermissionMap()
+        {
+            var permissionsCsvUri = "https://github.com/merill/graphpermissions.github.io/raw/main/permissions.csv";
+
+            WebClient client = new WebClient();
+            var content = client.DownloadString(permissionsCsvUri);
+
+
+            _graphDocUri = new Dictionary<string, string>();
+            using (var parser = new TextFieldParser(new StringReader(content)))
+            {
+                parser.TextFieldType = FieldType.Delimited;
+                parser.SetDelimiters(",");
+                parser.ReadFields(); //Skip header
+
+                while (!parser.EndOfData)
+                {
+                    var fields = parser.ReadFields();
+                    var apiUri = fields[4];
+                    var docUri = fields[5];
+                    var cleanGraphUri = GetCleanGraphUri(apiUri);
+                    if (!_graphDocUri.ContainsKey(cleanGraphUri))
+                    {
+                        _graphDocUri.Add(cleanGraphUri, docUri);
+                    }
+                    
+                }
+            }
+        }
+
+        private static string GetCleanGraphUri(string apiUri)
+        {
+            
+            var uri = Regex.Replace(apiUri, @" ?\{.*?\}", string.Empty);
+            return uri;
+        }
+
+        public static string GetGraphApiDocUri(string aadCmdName)
+        {
+            var cmdMap = GetCommandMap(aadCmdName);
+            var cmdGraphUri = GetCleanGraphUri(cmdMap.GraphUri);
+            string graphApiDocUri;
+            _graphDocUri.TryGetValue(cmdGraphUri, out graphApiDocUri);
+            return graphApiDocUri;
         }
 
         public static bool IsAadCommand(string aadCmdName)
