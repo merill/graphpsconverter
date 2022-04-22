@@ -1,25 +1,73 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Azure AD PowerShell to Graph PowerShell Conversion Helper";
+    ViewData["Title"] = "Graph PowerShell";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <h1 class="display-4">Graph PowerShell Conversion Analyzer</h1>
+    <p>Get help converting your MSOnline and Azure AD PowerShell script to Graph PowerShell.</p>
+    <p>Paste in your MSOnline and Azure AD PowerShell scripts and click Analyze.</p>
 
-    <form method="post">
-        <label asp-for="SourceScript" class="control-label">Source script:</label>  
-        <textarea asp-for="SourceScript" class="form-control"></textarea>
-        <input type="submit" value="Convert" asp-page-handler="Submit"/>
-        <p>Shown below is the converted code as a sample.</p>
+    <form method="post" id="convertForm">
 
-        <pre>
-            <code>
-                @Html.DisplayName(Model.ConvertedScript)
-            </code>
-        </pre>
-        
+        <div id="monSourceScript" style="width:800px;height:300px;border:1px solid grey"></div>
+
+        <textarea id="sourceScriptText" asp-for="SourceScript" class="form-control" style="display:none;"></textarea>
+        <p>
+            <input type="submit" value="Analyze" asp-page-handler="Submit" />
+        </p>
+
+
+        @{
+            if (HttpMethods.IsPost(Request.Method))
+            {
+                if (Model.ParsedScript != null && Model.ParsedScript.IsValid)
+                {
+                    <h2>Graph PowerShell Analysis</h2>
+                    
+                    @foreach (var cmd in Model.ParsedScript.ConvertedCommands)
+                    {
+                        <h3>@cmd.AadCmdName</h3>
+                        <p>
+                        <a href="@cmd.AadCmdDocLink" target="_blank">@cmd.AadCmdName</a> @Html.Raw("=>") <a href="@cmd.GraphCmdDocLink" target="_blank">@cmd.GraphCmdDisplayName</a>
+                        </p>
+                        <p>
+                        <code>@cmd.ConvertedScript</code>
+                        </p>
+                    }
+                }
+                else
+                {
+                    <p>There were some errors converting.</p>
+                    if (Model.ParsedScript != null && Model.ParsedScript.Errors.Count > 0)
+                    {
+                        <ul>
+                        @foreach (var err in Model.ParsedScript.Errors)
+                        {
+                            <li>@err.ErrorCode - @err.Message</li>
+                        }
+                        </ul>
+                    }
+                }
+            }
+        }
 
     </form>
 </div>
+@section scripts{
+<script>
+    var editor;
+    $(document).ready(function () {
+        require.config({ paths: { 'vs': '/lib/vs' } });
+        editor = monaco.editor.create(document.getElementById('monSourceScript'), {
+            value: "",
+            language: 'powershell'
+        });
+    })
+
+    $("#convertForm").submit(function(event) {
+        $('#sourceScriptText').val(editor.getValue());
+    });
+</script>
+}

@@ -5,15 +5,39 @@ namespace GraphPsConverter.Core.Model
 {
     public class ConvertedCommand
     {
-        private CommandAst _sourceCommandAst { get; set; }
+        public CommandAst CommandAst { get; private set; }
 
         public string? ConvertedScript { get; private set; }
 
         public bool HasGraphCommand { get; private set; }
 
+        public string AadCmdName { get; private set; }
+        public string GraphCmdName { get; private set; }
+
+        public string AadCmdDocLink { 
+            get 
+            {
+                return string.Format("https://docs.microsoft.com/en-us/powershell/module/azuread/{0}", AadCmdName);
+            } 
+        }
+
+        public string GraphCmdDocLink { 
+            get
+            {
+                return HasGraphCommand ? string.Format("https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.applications/add-mgapplicationkey") : "https://docs.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map";
+            }
+        }
+
+        public string GraphCmdDisplayName
+        {
+            get
+            {
+                return HasGraphCommand ? GraphCmdName : "This command is not yet available in Microsoft Graph";
+            }
+        }
         public ConvertedCommand(CommandAst sourceCommandAst)
         {
-            _sourceCommandAst = sourceCommandAst;
+            CommandAst = sourceCommandAst;
 
             ConvertedScript = GetConvertedScript();
         }
@@ -21,15 +45,17 @@ namespace GraphPsConverter.Core.Model
         public string? GetConvertedScript()
         {
             //Get the command and it's parameters as a list
-            List<Ast> children = _sourceCommandAst.FindAll(e => e.Parent == _sourceCommandAst, true).ToList();
+            List<Ast> children = CommandAst.FindAll(e => e.Parent == CommandAst, true).ToList();
 
-            var aadCmdName = children[0].ToString();
-            var graphCmdName = CommandMappingHelper.GetGraphCommand(aadCmdName);
-            HasGraphCommand = !string.IsNullOrEmpty(graphCmdName);
+            AadCmdName = children[0].ToString();
+            GraphCmdName = CommandMappingHelper.GetGraphCommand(AadCmdName);
+
+
+            HasGraphCommand = !string.IsNullOrEmpty(GraphCmdName);
 
             if (!HasGraphCommand) return null;
 
-            var convertedScript = new StringBuilder(graphCmdName);
+            var convertedScript = new StringBuilder(GraphCmdName);
 
             for (var index = 1; index < children.Count; index++)
             {
@@ -38,7 +64,7 @@ namespace GraphPsConverter.Core.Model
                 if (child is CommandParameterAst)
                 {
                     var aadParamName = child.ToString();
-                    var graphParamName = CommandMappingHelper.GetGraphParam(aadCmdName, aadParamName);
+                    var graphParamName = CommandMappingHelper.GetGraphParam(AadCmdName, aadParamName);
 
                     if (!string.IsNullOrEmpty(graphParamName))
                     {

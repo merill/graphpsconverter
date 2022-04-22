@@ -14,8 +14,13 @@ namespace GraphPsConverter.Core.Model
         public string ConvertedScript { get; internal set; }
         public List<ConvertedCommand> ConvertedCommands { get; internal set; }
         public List<ConverterParseError> Errors { get; set; }
-        public List<CommandAst>? Commands { get; internal set; }
+        public List<CommandAst> Commands { get; internal set; }
 
+
+        public ParsedScript():this(null)
+        {
+
+        }
         public ParsedScript(string sourceScript)
         {
             SourceScript = sourceScript;

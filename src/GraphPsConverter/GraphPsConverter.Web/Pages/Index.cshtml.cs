@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using GraphPsConverter.Core;
+using GraphPsConverter.Core.Model;
 
 namespace GraphPsConverter.Web.Pages
 {
@@ -12,7 +13,7 @@ namespace GraphPsConverter.Web.Pages
         public string SourceScript { get; set; }
 
         [BindProperty]
-        public string ConvertedScript { get; set; }
+        public ParsedScript ParsedScript { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -27,9 +28,7 @@ namespace GraphPsConverter.Web.Pages
         public void OnPostSubmit()
         {
             var converter = new Converter();
-            var converted = converter.ConvertToGraphPowerShell(SourceScript);
-
-            ConvertedScript = converted.ConvertedCommands[0].ConvertedScript;
+            ParsedScript = converter.ConvertToGraphPowerShell(SourceScript);
         }
 
     }
