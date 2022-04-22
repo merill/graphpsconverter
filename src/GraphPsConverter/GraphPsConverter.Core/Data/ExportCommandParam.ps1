@@ -21,13 +21,10 @@ Import-Module AzureADPreview
 Get-Command -Module AzureADPreview | foreach { if(-not $cmds.ContainsKey($_.Name.ToLower())) { $cmds[$_.Name.ToLower()] = $_ } }
 
 #Load all commands
-$params = $cmds.GetEnumerator() | foreach{ $cmd = $_.Value.Name; $module = $_.Value.Source; [pscustomobject]@{AadCmdName=$cmd; AadModuleName = $module; GraphCmdName=''; GraphModuleName=''; AadParamName=''; GraphParamName=''}; if($_.Value.Parameters -ne $null){ $_.Value.Parameters.GetEnumerator() | foreach { $paramName = $_.Value.Name; if(-not $ignoreVariables.Contains($paramName)) {[pscustomobject]@{AadCmdName=$cmd; AadModuleName = $module; GraphCmdName=''; GraphModuleName=''; AadParamName=$paramName; GraphParamName=''} }} } }
-
-#Remove dups introduced by Azureadpreview
-#$params = $params | Sort-Object -Property AadCmdName,AadParamName | Select-Object -Unique -Property AadCmdName,GraphCmdName,AadParamName,GraphParamName
+$params = $cmds.GetEnumerator() | foreach{ $cmd = $_.Value.Name; $module = $_.Value.Source; [pscustomobject]@{AadCmdName=$cmd; AadModuleName = $module; GraphCmdName=''; GraphModuleName=''; AadParamName=''; GraphParamName=''; GraphCmdScope=''; GraphUri=''}; if($_.Value.Parameters -ne $null){ $_.Value.Parameters.GetEnumerator() | foreach { $paramName = $_.Value.Name; if(-not $ignoreVariables.Contains($paramName)) {[pscustomobject]@{AadCmdName=$cmd; AadModuleName = $module; GraphCmdName=''; GraphModuleName=''; AadParamName=$paramName; GraphParamName='';GraphCmdScope=''; GraphUri=''} }} } }
 
 #Read all objects from Azure AD
-$allCmdMap = ($params | foreach { [pscustomobject]@{ AadCmdName = $_.AadCmdName; AadModuleName = $_.AadModuleName; GraphCmdName =''; GraphModuleName=''; } }) | Sort-Object -Property AadCmdName | Select-Object -Unique -Property AadCmdName, AadModuleName, GraphCmdName, GraphModuleName
+$allCmdMap = ($params | foreach { [pscustomobject]@{ AadCmdName = $_.AadCmdName; AadModuleName = $_.AadModuleName; GraphCmdName =''; GraphModuleName=''; GraphCmdScope=''; GraphUri=''} }) | Sort-Object -Property AadCmdName | Select-Object -Unique -Property AadCmdName, AadModuleName, GraphCmdName, GraphModuleName, GraphCmdScope, GraphUri
 
 #Load cmd into hash table
 $allCmdMapHash = @{}
@@ -43,7 +40,11 @@ $docCmdMapCsv | foreach{ $docCmdMapHash[$_.AadCmdName.ToLower()] = $_ }
 $allCmdMapHash.GetEnumerator() | foreach{ if($docCmdMapHash.ContainsKey($_.Name)) { $_.Value.GraphCmdName = $docCmdMapHash[$_.Name].GraphCmdName } else { Write-Host "FYI" $_.Value.AadCmdName "is not mapped to a Graph command." } }
 
 #Populate Graph Module name
-$allCmdMapHash.GetEnumerator() | foreach{ $graphCmdName = $_.Value.GraphCmdName; if($graphCmdName -ne ''){ $graphCmd = Get-Command $graphCmdName -ErrorAction Ignore; if ( $graphCmd -eq $null ) {Write-Host $graphCmdName "was not found in Graph PowerShell module"} else {$_.Value.GraphModuleName=$graphCmd.Source} } }
+$allCmdMapHash.GetEnumerator() | foreach{ $graphCmdName = $_.Value.GraphCmdName; if($graphCmdName -ne ''){ $graphCmd = Get-Command $graphCmdName -ErrorAction SilentlyContinue; if ( $graphCmd -eq $null ) {Write-Host $graphCmdName "was not found in Graph PowerShell module"} else {$_.Value.GraphModuleName=$graphCmd.Source} } }
+
+#Populate Graph scope
+$allCmdMapHash.GetEnumerator() | foreach{ $graphCmdName = $_.Value.GraphCmdName; if($graphCmdName -ne ''){ $graphCmd = Find-MgGraphCommand -Command $graphCmdName -ErrorAction SilentlyContinue; if ( $graphCmd -eq $null ) {Write-Host $graphCmdName "was not found in Graph PowerShell module"} else {$_.Value.GraphCmdScope=($graphCmd[0].Permissions | select -ExpandProperty Name) -join ";"; $_.Value.GraphUri=$graphCmd[0].URI} } }
+
 
 #check for items in doc that are not in the PowerShell objects (most probably a typo in the doc that needs to be fixed)
 $docCmdMapHash.GetEnumerator() | foreach{ if(-not $allCmdMapHash.ContainsKey($_.Value.AadCmdName.ToLower())) { Write-Host $_.Value.AadCmdName "in doc was not found in PowerShell module" } }
