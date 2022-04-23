@@ -27,6 +27,7 @@ namespace GraphPsConverter.Web.Pages
 
         public void OnPostSubmit()
         {
+            _logger.LogInformation(SourceScript);
             var converter = new Converter();
             ParsedScript = converter.ConvertToGraphPowerShell(SourceScript);
         }
