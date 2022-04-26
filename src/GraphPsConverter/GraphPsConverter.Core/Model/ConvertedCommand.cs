@@ -89,7 +89,7 @@ namespace GraphPsConverter.Core.Model
                     var aadParamName = child.ToString();                    
                     var paramMap = CommandMappingHelper.GetParamMap(AadCmdName, aadParamName);
 
-                    var graphParamName = paramMap.GraphParamName;
+                    var graphParamName = paramMap == null ? null : paramMap.GraphParamName;
 
                     if (!string.IsNullOrEmpty(graphParamName))
                     {
