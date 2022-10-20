@@ -113,10 +113,29 @@ namespace GraphPsConverter.Core
 
         private static Dictionary<string, CommandMap> GetCommandMap()
         {
-            var csv = GetCsv("CommandMap.csv");
+
 
             var commandMaps = new Dictionary<string, CommandMap>();
 
+            //Sort by module name so AzureADPreview comes after AzureAD module
+            var sortedCommandMapList = GetCommandMapSortedByModuleName();
+            foreach (var commandMap in sortedCommandMapList)
+            {
+                var key = GetCmdKey(commandMap.AadCmdName);
+                //If the key is already there it's most probably AzureADPreview that is a duplicate of Azure AD so we skip
+                if (!commandMaps.ContainsKey(key))
+                {
+                    commandMaps.Add(key, commandMap);
+                }
+            }
+
+            return commandMaps;
+        }
+
+        private static IOrderedEnumerable<CommandMap> GetCommandMapSortedByModuleName()
+        {
+            var commandMapList = new List<CommandMap>();
+            var csv = GetCsv("CommandMap.csv");
             foreach (var fields in csv)
             {
                 var commandMap = new CommandMap()
@@ -128,31 +147,54 @@ namespace GraphPsConverter.Core
                     GraphCmdScope = fields[4],
                     GraphUri = fields[5],
                 };
-                commandMaps.Add(GetCmdKey(commandMap.AadCmdName), commandMap);
+                commandMapList.Add(commandMap);
             }
-            return commandMaps;
+            var sortedCommandMapList = from p in commandMapList orderby p.AadModuleName select p;
+            return sortedCommandMapList;
         }
 
         private static Dictionary<string, ParamMap> GetParamMap()
         {
-            var csv = GetCsv("ParamMap.csv");
 
             var paramMaps = new Dictionary<string, ParamMap>();
+
+            //Sort by module name so AzureADPreview comes after AzureAD module
+            var sortedList = GetParamMapSortedByModuleName();
+            foreach (var paramMap in sortedList)
+            {
+                var key = GetParamKey(paramMap.AadCmdName, paramMap.AadParamName);
+                //If the key is already there it's most probably AzureADPreview that is a duplicate of Azure AD so we skip
+                if (!paramMaps.ContainsKey(key))
+                {
+                    paramMaps.Add(key, paramMap);
+                }
+                
+            }
+            
+            return paramMaps;
+        }
+
+        private static IOrderedEnumerable<ParamMap> GetParamMapSortedByModuleName()
+        {
+            var paramMapList = new List<ParamMap>();
+            var csv = GetCsv("ParamMap.csv");
 
             foreach (var fields in csv)
             {
                 var paramMap = new ParamMap()
                 {
                     AadCmdName = fields[0],
-                    AadModuleName= fields[1],
+                    AadModuleName = fields[1],
                     GraphCmdName = fields[2],
-                    GraphModuleName= fields[3],
+                    GraphModuleName = fields[3],
                     AadParamName = fields[4],
                     GraphParamName = fields[5]
                 };
-                paramMaps.Add(GetParamKey(paramMap.AadCmdName, paramMap.AadParamName), paramMap);
+                paramMapList.Add(paramMap);
             }
-            return paramMaps;
+
+            var sortedList = from p in paramMapList orderby p.AadModuleName select p;
+            return sortedList;
         }
 
         public static string GetCmdKey(string aadCmdName)

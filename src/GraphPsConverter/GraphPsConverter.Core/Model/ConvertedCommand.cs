@@ -26,7 +26,7 @@ namespace GraphPsConverter.Core.Model
                 var scopes = CommandMap.GraphCmdScope;
                 if(string.IsNullOrEmpty(scopes)) return null;
 
-                return scopes.Split(";")[0];
+                return scopes.Split(",")[0];
             }
         }
         public string AadCmdDocLink { 
