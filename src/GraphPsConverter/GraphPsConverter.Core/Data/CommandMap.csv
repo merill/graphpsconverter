@@ -1,647 +1,328 @@
-"Name","Module","GraphCmdName","GraphModuleName","GraphScopesApplication","GraphScopesDelegate","ApiUri"
-"Add-MsolAdministrativeUnitMember","MSOnline","New-MgDirectoryAdministrativeUnitMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Add-MsolForeignGroupToRole","MSOnline","",,"","",
-"Add-MsolGroupMember","MSOnline","New-MgGroupMember","Microsoft.Graph.Groups",,,
-"Add-MsolRoleMember","MSOnline","New-MgDirectoryRoleMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, RoleManagement.ReadWrite.Directory",
-"Add-MsolScopedRoleMember","MSOnline","New-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Confirm-MsolDomain","MSOnline","Confirm-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Confirm-MsolEmailVerifiedDomain","MSOnline","",,"","",
-"Connect-MsolService","MSOnline","Connect-MgGraph","Microsoft.Graph.Authentication",,,
-"Convert-MsolDomainToFederated","MSOnline","",,"","",
-"Convert-MsolDomainToStandard","MSOnline","",,"","",
-"Convert-MsolFederatedUser","MSOnline","",,"","",
-"Disable-MsolDevice","MSOnline","",,"","",
-"Enable-MsolDevice","MSOnline","",,"","",
-"Get-MsolAccountSku","MSOnline","Get-MgSubscribedSku","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All",
-"Get-MsolAdministrativeUnit","MSOnline","Get-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-MsolAdministrativeUnitMember","MSOnline","Get-MgDirectoryAdministrativeUnitMember","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-MsolCompanyAllowedDataLocation","MSOnline","",,"","",
-"Get-MsolCompanyInformation","MSOnline","Get-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All, User.Read",
-"Get-MsolContact","MSOnline","Get-MgContract","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-MsolDevice","MSOnline","Get-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All, Directory.ReadWrite.All","Device.Read.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Get-MsolDeviceRegistrationServicePolicy","MSOnline","",,"","",
-"Get-MsolDirSyncConfiguration","MSOnline","",,"","",
-"Get-MsolDirSyncFeatures","MSOnline","",,"","",
-"Get-MsolDirSyncProvisioningError","MSOnline","",,"","",
-"Get-MsolDomain","MSOnline","Get-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Domain.Read.All, Domain.ReadWrite.All","Directory.Read.All, Domain.Read.All, Domain.ReadWrite.All",
-"Get-MsolDomainFederationSettings","MSOnline","Get-MgDomainFederationConfiguration",,"","",
-"Get-MsolDomainVerificationDns","MSOnline","Get-MgDomainVerificationDnsRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All, Domain.ReadWrite.All","Domain.Read.All, Domain.ReadWrite.All",
-"Get-MsolFederationProperty","MSOnline","",,"","",
-"Get-MsolGroup","MSOnline","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All",
-"Get-MsolGroupMember","MSOnline","Get-MgGroupMember","Microsoft.Graph.Groups","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All",
-"Get-MsolHasObjectsWithDirSyncProvisioningErrors","MSOnline","",,"","",
-"Get-MsolPartnerContract","MSOnline","",,"","",
-"Get-MsolPartnerInformation","MSOnline","",,"","",
-"Get-MsolPasswordPolicy","MSOnline","",,"","",
-"Get-MsolRole","MSOnline","Get-MgDirectoryRole","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-MsolRoleMember","MSOnline","Get-MgDirectoryRoleMember","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-MsolScopedRoleMember","MSOnline","Get-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-MsolServicePrincipal","MSOnline","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-MsolServicePrincipalCredential","MSOnline","",,"","",
-"Get-MsolSubscription","MSOnline","Get-MgSubscription","Microsoft.Graph.ChangeNotifications",,,
-"Get-MsolUser","MSOnline","Get-MgUser","Microsoft.Graph.Users","DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadBasic.All, User.ReadWrite.All, User.Read, User.ReadWrite",
-"Get-MsolUserByStrongAuthentication","MSOnline","",,"","",
-"Get-MsolUserRole","MSOnline","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All, User.Read",
-"New-MsolAdministrativeUnit","MSOnline","New-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"New-MsolDomain","MSOnline","New-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"New-MsolFederatedDomain","MSOnline","",,"","",
-"New-MsolGroup","MSOnline","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"New-MsolLicenseOptions","MSOnline","",,"","",
-"New-MsolServicePrincipal","MSOnline","New-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-MsolServicePrincipalAddresses","MSOnline","",,"","",
-"New-MsolServicePrincipalCredential","MSOnline","",,"","",
-"New-MsolUser","MSOnline","New-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.ReadWrite.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ReadWrite.All",
-"New-MsolWellKnownGroup","MSOnline","",,"","",
-"Redo-MsolProvisionContact","MSOnline","",,"","",
-"Redo-MsolProvisionGroup","MSOnline","",,"","",
-"Redo-MsolProvisionUser","MSOnline","",,"","",
-"Remove-MsolAdministrativeUnit","MSOnline","Remove-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-MsolAdministrativeUnitMember","MSOnline","Remove-MgDirectoryAdministrativeUnitScopedRoleMember","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, RoleManagement.ReadWrite.Directory",
-"Remove-MsolApplicationPassword","MSOnline","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-MsolContact","MSOnline","Remove-MgContact","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-MsolDevice","MSOnline","Remove-MgDevice","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"Remove-MsolDomain","MSOnline","Remove-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Remove-MsolFederatedDomain","MSOnline","",,"","",
-"Remove-MsolForeignGroupFromRole","MSOnline","",,"","",
-"Remove-MsolGroup","MSOnline","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","Directory.AccessAsUser.All, Group.ReadWrite.All",
-"Remove-MsolGroupMember","MSOnline","",,"","",
-"Remove-MsolRoleMember","MSOnline","",,"","",
-"Remove-MsolScopedRoleMember","MSOnline","Remove-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-MsolServicePrincipal","MSOnline","Remove-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-MsolServicePrincipalCredential","MSOnline","",,"","",
-"Remove-MsolUser","MSOnline","Remove-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, User.ReadWrite.All",
-"Reset-MsolStrongAuthenticationMethodByUpn","MSOnline","",,"","",
-"Restore-MsolUser","MSOnline","Restore-MgUser","Microsoft.Graph.Users.Actions",,,
-"Set-MsolADFSContext","MSOnline","",,"","",
-"Set-MsolAdministrativeUnit","MSOnline","Update-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-MsolCompanyAllowedDataLocation","MSOnline","",,"","",
-"Set-MsolCompanyContactInformation","MSOnline","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.ReadWrite.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Organization.ReadWrite.All",
-"Set-MsolCompanyMultiNationalEnabled","MSOnline","",,"","",
-"Set-MsolCompanySecurityComplianceContactInformation","MSOnline","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.ReadWrite.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Organization.ReadWrite.All",
-"Set-MsolCompanySettings","MSOnline","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.ReadWrite.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Organization.ReadWrite.All",
-"Set-MsolDeviceRegistrationServicePolicy","MSOnline","",,"","",
-"Set-MsolDirSyncConfiguration","MSOnline","",,"","",
-"Set-MsolDirSyncEnabled","MSOnline","",,"","",
-"Set-MsolDirSyncFeature","MSOnline","",,"","",
-"Set-MsolDomain","MSOnline","Update-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Set-MsolDomainAuthentication","MSOnline","Update-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Set-MsolDomainFederationSettings","MSOnline","Update-MgDomainFederationConfiguration",,"","",
-"Set-MsolGroup","MSOnline","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"Set-MsolPartnerInformation","MSOnline","",,"","",
-"Set-MsolPasswordPolicy","MSOnline","",,"","",
-"Set-MsolServicePrincipal","MSOnline","Update-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-MsolUser","MSOnline","Update-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite, User.ReadWrite.All",
-"Set-MsolUserLicense","MSOnline","Set-MgUserLicense","Microsoft.Graph.Users.Actions","Directory.ReadWrite.All, User.ReadWrite.All","Directory.ReadWrite.All, User.ReadWrite.All",
-"Set-MsolUserPassword","MSOnline","Reset-MgUserAuthenticationMethodPassword",,"","",
-"Set-MsolUserPrincipalName","MSOnline","Update-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite, User.ReadWrite.All",
-"Update-MsolFederatedDomain","MSOnline",,,"","",
-"Get-AzureADApplicationProxyConnectorGroupMembers","AzureAD","",,"","",
-"Add-AzureADApplicationOwner","AzureAD","New-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Add-AzureADDeviceRegisteredOwner","AzureAD","New-MgDeviceRegisteredOwnerByRef","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"Add-AzureADDeviceRegisteredUser","AzureAD","New-MgDeviceRegisteredUserByRef","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"Add-AzureADDirectoryRoleMember","AzureAD","New-MgDirectoryRoleMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, RoleManagement.ReadWrite.Directory",
-"Add-AzureADGroupMember","AzureAD","New-MgGroupMember","Microsoft.Graph.Groups",,,
-"Add-AzureADGroupOwner","AzureAD","New-MgGroupOwnerByRef","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"Add-AzureADMSAdministrativeUnitMember","AzureAD","New-MgDirectoryAdministrativeUnitMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Add-AzureADMSApplicationOwner","AzureAD","New-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Add-AzureADMSLifecyclePolicyGroup","AzureAD","New-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Add-AzureADMSScopedRoleMembership","AzureAD","New-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Add-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureAD","New-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications",,,
-"Add-AzureADServicePrincipalOwner","AzureAD","New-MgServicePrincipalOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Confirm-AzureADDomain","AzureAD","Confirm-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Connect-AzureAD","AzureAD","Connect-MgGraph","Microsoft.Graph.Authentication",,,
-"Disconnect-AzureAD","AzureAD","Disconnect-MgGraph","Microsoft.Graph.Authentication",,,
-"Enable-AzureADDirectoryRole","AzureAD","New-MgDirectoryRoleTemplate","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Get-AzureADApplication","AzureAD","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Get-AzureADApplicationExtensionProperty","AzureAD","Get-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.Read.All",
-"Get-AzureADApplicationKeyCredential","AzureAD","",,"","",
-"Get-AzureADApplicationLogo","AzureAD","Get-MgApplicationLogo","Microsoft.Graph.Applications",,,
-"Get-AzureADApplicationOwner","AzureAD","Get-MgApplicationOwner","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADApplicationPasswordCredential","AzureAD","",,"","",
-"Get-AzureADApplicationProxyApplication","AzureAD","",,"","",
-"Get-AzureADApplicationProxyApplicationConnectorGroup","AzureAD","",,"","",
-"Get-AzureADApplicationProxyConnector","AzureAD","",,"","",
-"Get-AzureADApplicationProxyConnectorGroup","AzureAD","",,"","",
-"Get-AzureADApplicationProxyConnectorGroupMember","AzureAD",", ",,"","",
-"Get-AzureADApplicationProxyConnectorMemberOf","AzureAD","",,"","",
-"Get-AzureADApplicationServiceEndpoint","AzureAD","",,"","",
-"Get-AzureADContact","AzureAD","Get-MgContact","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, OrgContact.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, OrgContact.Read.All",
-"Get-AzureADContactDirectReport","AzureAD","Get-MgContactDirectReport","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Get-AzureADContactManager","AzureAD","Get-MgContactManager","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Get-AzureADContactMembership","AzureAD","Get-MgContactMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Get-AzureADContactThumbnailPhoto","AzureAD","",,"","",
-"Get-AzureADContract","AzureAD","Get-MgContract","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADCurrentSessionInfo","AzureAD","Get-MgContext","Microsoft.Graph.Authentication",,,
-"Get-AzureADDeletedApplication","AzureAD","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADDevice","AzureAD","Get-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All, Directory.ReadWrite.All","Device.Read.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Get-AzureADDeviceConfiguration","AzureAD","Get-MgDeviceManagementDeviceConfiguration","Microsoft.Graph.DeviceManagement","DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All","DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All",
-"Get-AzureADDeviceRegisteredOwner","AzureAD","Get-MgDeviceRegisteredOwner","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All, Directory.Read.All, Directory.ReadWrite.All","Device.Read.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADDeviceRegisteredUser","AzureAD","Get-MgDeviceRegisteredUser","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All, Directory.Read.All, Directory.ReadWrite.All","Device.Read.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADDirectoryRole","AzureAD","Get-MgDirectoryRole","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-AzureADDirectoryRoleMember","AzureAD","Get-MgDirectoryRoleMember","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-AzureADDirectoryRoleTemplate","AzureAD","Get-MgDirectoryRoleTemplate","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-AzureADDomain","AzureAD","Get-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Domain.Read.All, Domain.ReadWrite.All","Directory.Read.All, Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADDomainNameReference","AzureAD","Get-MgDomainDomainNameReferenceByRef","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All, Domain.ReadWrite.All","Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADDomainServiceConfigurationRecord","AzureAD","Get-MgDomainServiceConfigurationRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All, Domain.ReadWrite.All","Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADDomainVerificationDnsRecord","AzureAD","Get-MgDomainVerificationDnsRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All, Domain.ReadWrite.All","Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADExtensionProperty","AzureAD","Get-MgDirectoryObjectAvailableExtensionProperty","Microsoft.Graph.DirectoryObjects",,,
-"Get-AzureADGroup","AzureAD","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All",
-"Get-AzureADGroupAppRoleAssignment","AzureAD","Get-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADGroupMember","AzureAD","Get-MgGroupMember","Microsoft.Graph.Groups","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All",
-"Get-AzureADGroupOwner","AzureAD","Get-MgGroupOwner","Microsoft.Graph.Groups","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All",
-"Get-AzureADMSAdministrativeUnit","AzureAD","Get-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSAdministrativeUnitMember","AzureAD","Get-MgDirectoryAdministrativeUnitMember","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSApplication","AzureAD","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Get-AzureADMSApplicationExtensionProperty","AzureAD","Get-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.Read.All",
-"Get-AzureADMSApplicationOwner","AzureAD","Get-MgApplicationOwner","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSAuthorizationPolicy","AzureAD","",,"","",
-"Get-AzureADMSConditionalAccessPolicy","AzureAD","Get-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.All","Policy.Read.All",
-"Get-AzureADMSDeletedDirectoryObject","AzureAD","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADMSDeletedGroup","AzureAD","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADMSGroup","AzureAD","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All",
-"Get-AzureADMSGroupLifecyclePolicy","AzureAD","Get-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.Read.All, Directory.ReadWrite.All","Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSGroupPermissionGrant","AzureAD","",,"","",
-"Get-AzureADMSIdentityProvider","AzureAD","Get-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.Read.All, IdentityProvider.ReadWrite.All","IdentityProvider.Read.All, IdentityProvider.ReadWrite.All",
-"Get-AzureADMSLifecyclePolicyGroup","AzureAD","",,"","",
-"Get-AzureADMSNamedLocationPolicy","AzureAD","Get-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All","Policy.Read.All",
-"Get-AzureADMSPermissionGrantConditionSet","AzureAD","Get-MgPolicyPermissionGrantPolicyInclude, Get-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns","Directory.Read.All, Policy.Read.PermissionGrant","Directory.Read.All, Policy.Read.PermissionGrant",
-"Get-AzureADMSPermissionGrantPolicy","AzureAD","Get-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.PermissionGrant, Policy.ReadWrite.PermissionGrant","Policy.Read.PermissionGrant, Policy.ReadWrite.PermissionGrant",
-"Get-AzureADMSRoleAssignment","AzureAD","",,"","",
-"Get-AzureADMSRoleDefinition","AzureAD","",,"","",
-"Get-AzureADMSScopedRoleMembership","AzureAD","Get-MgUserScopedRoleMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureAD","Get-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications","Application.Read.All, Directory.Read.All","Application.Read.All, Directory.Read.All",
-"Get-AzureADOAuth2PermissionGrant","AzureAD","Get-MgOauth2PermissionGrant","Microsoft.Graph.Identity.SignIns","DelegatedPermissionGrant.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADObjectByObjectId","AzureAD","Get-MgDirectoryObjectById","Microsoft.Graph.DirectoryObjects",,,
-"Get-AzureADServiceAppRoleAssignedTo","AzureAD","Get-MgServicePrincipalAppRoleAssignedTo","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServiceAppRoleAssignment","AzureAD","Get-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipal","AzureAD","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalCreatedObject","AzureAD","Get-MgServicePrincipalCreatedObject","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalKeyCredential","AzureAD","",,"","",
-"Get-AzureADServicePrincipalMembership","AzureAD","Get-MgServicePrincipalTransitiveMemberOf","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalOAuth2PermissionGrant","AzureAD","Get-MgServicePrincipalOauth2PermissionGrant","Microsoft.Graph.Applications","DelegatedPermissionGrant.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalOwnedObject","AzureAD","Get-MgServicePrincipalOwnedObject","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalOwner","AzureAD","Get-MgServicePrincipalOwner","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalPasswordCredential","AzureAD","",,"","",
-"Get-AzureADSubscribedSku","AzureAD","Get-MgSubscribedSku","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All",
-"Get-AzureADTenantDetail","AzureAD","Get-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All, User.Read",
-"Get-AzureADTrustedCertificateAuthority","AzureAD","",,"","",
-"Get-AzureADUser","AzureAD","Get-MgUser","Microsoft.Graph.Users","DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadBasic.All, User.ReadWrite.All, User.Read, User.ReadWrite",
-"Get-AzureADUserAppRoleAssignment","AzureAD","Get-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADUserCreatedObject","AzureAD","Get-MgUserCreatedObject","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite, User.ReadWrite.All",
-"Get-AzureADUserDirectReport","AzureAD","Get-MgUserDirectReport","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserExtension","AzureAD","Get-MgUserExtension","Microsoft.Graph.Users",,,
-"Get-AzureADUserLicenseDetail","AzureAD","Get-MgUserLicenseDetail","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserManager","AzureAD","Get-MgUserManager","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserMembership","AzureAD","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All, User.Read",
-"Get-AzureADUserOAuth2PermissionGrant","AzureAD","Get-MgUserOauth2PermissionGrant","Microsoft.Graph.Users","DelegatedPermissionGrant.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADUserOwnedDevice","AzureAD","Get-MgUserOwnedDevice","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserOwnedObject","AzureAD","Get-MgUserOwnedObject","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserRegisteredDevice","AzureAD","Get-MgUserRegisteredDevice","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserThumbnailPhoto","AzureAD","Get-MgUserPhoto","Microsoft.Graph.Users",,"User.Read",
-"Get-CrossCloudVerificationCode","AzureAD","",,"","",
-"New-AzureADApplication","AzureAD","New-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADApplicationExtensionProperty","AzureAD","New-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADApplicationKeyCredential","AzureAD","Add-MgApplicationKey","Microsoft.Graph.Applications",,,
-"New-AzureADApplicationPasswordCredential","AzureAD","Add-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADApplicationProxyApplication","AzureAD","",,"","",
-"New-AzureADApplicationProxyConnectorGroup","AzureAD","",,"","",
-"New-AzureADDevice","AzureAD","New-MgDevice","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"New-AzureADDomain","AzureAD","New-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"New-AzureADGroup","AzureAD","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"New-AzureADGroupAppRoleAssignment","AzureAD","New-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSAdministrativeUnit","AzureAD","New-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSApplication","AzureAD","New-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSApplicationExtensionProperty","AzureAD","New-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSApplicationKey","AzureAD","Add-MgApplicationKey","Microsoft.Graph.Applications",,,
-"New-AzureADMSApplicationPassword","AzureAD","Add-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSConditionalAccessPolicy","AzureAD","New-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"New-AzureADMSGroup","AzureAD","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"New-AzureADMSGroupLifecyclePolicy","AzureAD","New-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"New-AzureADMSIdentityProvider","AzureAD","New-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","IdentityProvider.ReadWrite.All",
-"New-AzureADMSInvitation","AzureAD","New-MgInvitation","Microsoft.Graph.Identity.SignIns","Directory.ReadWrite.All, User.Invite.All, User.ReadWrite.All","Directory.ReadWrite.All, User.Invite.All, User.ReadWrite.All",
-"New-AzureADMSNamedLocationPolicy","AzureAD","New-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"New-AzureADMSPermissionGrantConditionSet","AzureAD","New-MgPolicyPermissionGrantPolicyInclude, New-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","Policy.ReadWrite.PermissionGrant",
-"New-AzureADMSPermissionGrantPolicy","AzureAD","",,"","",
-"New-AzureADMSRoleAssignment","AzureAD","",,"","",
-"New-AzureADMSRoleDefinition","AzureAD","",,"","",
-"New-AzureADServiceAppRoleAssignment","AzureAD","New-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All, Directory.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"New-AzureADServicePrincipal","AzureAD","New-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADServicePrincipalKeyCredential","AzureAD","New-MgPolicyPermissionGrantPolicy, Add-MgServicePrincipalKey","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"New-AzureADServicePrincipalPasswordCredential","AzureAD","Add-MgServicePrincipalPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADTrustedCertificateAuthority","AzureAD","",,"","",
-"New-AzureADUser","AzureAD","New-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.ReadWrite.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ReadWrite.All",
-"New-AzureADUserAppRoleAssignment","AzureAD","New-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADApplication","AzureAD","Remove-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADApplicationExtensionProperty","AzureAD","Remove-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADApplicationKeyCredential","AzureAD","Remove-MgApplicationKey","Microsoft.Graph.Applications",,,
-"Remove-AzureADApplicationOwner","AzureAD","",,"","",
-"Remove-AzureADApplicationPasswordCredential","AzureAD","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADApplicationProxyApplication","AzureAD","",,"","",
-"Remove-AzureADApplicationProxyApplicationConnectorGroup","AzureAD","",,"","",
-"Remove-AzureADApplicationProxyConnectorGroup","AzureAD","",,"","",
-"Remove-AzureADContact","AzureAD","Remove-MgContact","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADContactManager","AzureAD","Remove-MgContactManagerByRef","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADDeletedApplication","AzureAD","Remove-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.ReadWrite.All, Directory.ReadWrite.All, Group.ReadWrite.All, User.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All, User.ReadWrite.All",
-"Remove-AzureADDevice","AzureAD","Remove-MgDevice","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"Remove-AzureADDeviceRegisteredOwner","AzureAD","",,"","",
-"Remove-AzureADDeviceRegisteredUser","AzureAD","",,"","",
-"Remove-AzureADDirectoryRoleMember","AzureAD","Remove-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADDomain","AzureAD","Remove-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Remove-AzureADGroup","AzureAD","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","Directory.AccessAsUser.All, Group.ReadWrite.All",
-"Remove-AzureADGroupAppRoleAssignment","AzureAD","Remove-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADGroupMember","AzureAD","",,"","",
-"Remove-AzureADGroupOwner","AzureAD","",,"","",
-"Remove-AzureADMSAdministrativeUnit","AzureAD","Remove-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSAdministrativeUnitMember","AzureAD","Remove-MgDirectoryAdministrativeUnitScopedRoleMember","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, RoleManagement.ReadWrite.Directory",
-"Remove-AzureADMSApplication","AzureAD","Remove-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSApplicationExtensionProperty","AzureAD","Remove-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSApplicationKey","AzureAD","Remove-MgApplicationKey","Microsoft.Graph.Applications",,,
-"Remove-AzureADMSApplicationOwner","AzureAD","",,"","",
-"Remove-AzureADMSApplicationPassword","AzureAD","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSApplicationVerifiedPublisher","AzureAD","",,"","",
-"Remove-AzureADMSConditionalAccessPolicy","AzureAD","Remove-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Remove-AzureADMSDeletedDirectoryObject","AzureAD","Remove-MgDirectoryObject","Microsoft.Graph.DirectoryObjects",,"Directory.AccessAsUser.All",
-"Remove-AzureADMSGroup","AzureAD","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","Directory.AccessAsUser.All, Group.ReadWrite.All",
-"Remove-AzureADMSGroupLifecyclePolicy","AzureAD","Remove-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Remove-AzureADMSIdentityProvider","AzureAD","Remove-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","IdentityProvider.ReadWrite.All",
-"Remove-AzureADMSLifecyclePolicyGroup","AzureAD","Remove-MgGroupFromLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Remove-AzureADMSNamedLocationPolicy","AzureAD","Remove-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Remove-AzureADMSPermissionGrantConditionSet","AzureAD","Remove-MgPolicyPermissionGrantPolicyInclude, Remove-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns",,,
-"Remove-AzureADMSPermissionGrantPolicy","AzureAD","Remove-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","Policy.ReadWrite.PermissionGrant",
-"Remove-AzureADMSRoleAssignment","AzureAD","",,"","",
-"Remove-AzureADMSRoleDefinition","AzureAD","",,"","",
-"Remove-AzureADMSScopedRoleMembership","AzureAD","Remove-MgUserScopedRoleMemberOf","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureAD","Remove-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications",,,
-"Remove-AzureADOAuth2PermissionGrant","AzureAD","Remove-MgOauth2PermissionGrant","Microsoft.Graph.Identity.SignIns","DelegatedPermissionGrant.ReadWrite.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Remove-AzureADServiceAppRoleAssignment","AzureAD","Remove-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADServicePrincipal","AzureAD","Remove-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADServicePrincipalKeyCredential","AzureAD","Remove-MgServicePrincipalKey","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Remove-AzureADServicePrincipalOwner","AzureAD","",,"","",
-"Remove-AzureADServicePrincipalPasswordCredential","AzureAD","Remove-MgServicePrincipalPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADTrustedCertificateAuthority","AzureAD","",,"","",
-"Remove-AzureADUser","AzureAD","Remove-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, User.ReadWrite.All",
-"Remove-AzureADUserAppRoleAssignment","AzureAD","Remove-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADUserExtension","AzureAD","Remove-MgUserExtension","Microsoft.Graph.Users",,,
-"Remove-AzureADUserManager","AzureAD","Remove-MgUserManagerByRef","Microsoft.Graph.Users",,,
-"Reset-AzureADMSLifeCycleGroup","AzureAD","Invoke-MgRenewGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.ReadWrite.All, Group.ReadWrite.All",
-"Restore-AzureADDeletedApplication","AzureAD","Restore-MgApplication","Microsoft.Graph.Applications",,,
-"Restore-AzureADMSDeletedDirectoryObject","AzureAD","Restore-MgDirectoryObject","Microsoft.Graph.DirectoryObjects",,,
-"Revoke-AzureADSignedInUserAllRefreshToken","AzureAD","",,"","",
-"Revoke-AzureADUserAllRefreshToken","AzureAD","Invoke-MgInvalidateUserRefreshTokenByRef",,"","",
-"Select-AzureADGroupIdsContactIsMemberOf","AzureAD","Get-MgContactMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Select-AzureADGroupIdsGroupIsMemberOf","AzureAD","Get-MgGroupMemberOf","Microsoft.Graph.Groups","Group.Read.All, GroupMember.Read.All","Group.Read.All, GroupMember.Read.All",
-"Select-AzureADGroupIdsServicePrincipalIsMemberOf","AzureAD","Get-MgServicePrincipalMemberOf","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Select-AzureADGroupIdsUserIsMemberOf","AzureAD","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All, User.Read",
-"Set-AzureADApplication","AzureAD","Update-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADApplicationLogo","AzureAD","Set-MgApplicationLogo","Microsoft.Graph.Applications",,,
-"Set-AzureADApplicationProxyApplication","AzureAD","",,"","",
-"Set-AzureADApplicationProxyApplicationConnectorGroup","AzureAD","",,"","",
-"Set-AzureADApplicationProxyApplicationCustomDomainCertificate","AzureAD","",,"","",
-"Set-AzureADApplicationProxyApplicationSingleSignOn","AzureAD","",,"","",
-"Set-AzureADApplicationProxyConnector","AzureAD","",,"","",
-"Set-AzureADApplicationProxyConnectorGroup","AzureAD","",,"","",
-"Set-AzureADDevice","AzureAD","Update-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Set-AzureADDomain","AzureAD","Update-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Set-AzureADGroup","AzureAD","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"Set-AzureADMSAdministrativeUnit","AzureAD","Update-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADMSApplication","AzureAD","Update-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADMSApplicationLogo","AzureAD","Set-MgApplicationLogo","Microsoft.Graph.Applications",,,
-"Set-AzureADMSApplicationVerifiedPublisher","AzureAD","",,"","",
-"Set-AzureADMSAuthorizationPolicy","AzureAD","",,"","",
-"Set-AzureADMSConditionalAccessPolicy","AzureAD","Update-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Set-AzureADMSGroup","AzureAD","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"Set-AzureADMSGroupLifecyclePolicy","AzureAD","Update-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Set-AzureADMSIdentityProvider","AzureAD","Update-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","IdentityProvider.ReadWrite.All",
-"Set-AzureADMSNamedLocationPolicy","AzureAD","Update-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Set-AzureADMSPermissionGrantConditionSet","AzureAD","Update-MgPolicyPermissionGrantPolicyInclude, Update-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns",,,
-"Set-AzureADMSPermissionGrantPolicy","AzureAD","Update-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","Policy.ReadWrite.PermissionGrant",
-"Set-AzureADMSRoleDefinition","AzureAD","",,"","",
-"Set-AzureADServicePrincipal","AzureAD","Update-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADTenantDetail","AzureAD","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.ReadWrite.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Organization.ReadWrite.All",
-"Set-AzureADTrustedCertificateAuthority","AzureAD","",,"","",
-"Set-AzureADUser","AzureAD","Update-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite, User.ReadWrite.All",
-"Set-AzureADUserExtension","AzureAD","Update-MgUserExtension","Microsoft.Graph.Users",,,
-"Set-AzureADUserLicense","AzureAD","Set-MgUserLicense","Microsoft.Graph.Users.Actions","Directory.ReadWrite.All, User.ReadWrite.All","Directory.ReadWrite.All, User.ReadWrite.All",
-"Set-AzureADUserManager","AzureAD","Set-MgUserManagerByRef","Microsoft.Graph.Users","Directory.ReadWrite.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ReadWrite.All",
-"Set-AzureADUserPassword","AzureAD","Update-MgUserPassword","Microsoft.Graph.Users.Actions",,"Directory.AccessAsUser.All",
-"Set-AzureADUserThumbnailPhoto","AzureAD","Set-MgUserPhotoContent","Microsoft.Graph.Users",,"User.ReadWrite",
-"Update-AzureADSignedInUserPassword","AzureAD","Update-MgUserPassword","Microsoft.Graph.Users.Actions",,"Directory.AccessAsUser.All",
-"Add-AzureADAdministrativeUnitMember","AzureADPreview","",,"","",
-"Add-AzureADApplicationOwner","AzureADPreview","New-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Add-AzureADApplicationPolicy","AzureADPreview","",,"","",
-"Add-AzureADDeviceRegisteredOwner","AzureADPreview","New-MgDeviceRegisteredOwnerByRef","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"Add-AzureADDeviceRegisteredUser","AzureADPreview","New-MgDeviceRegisteredUserByRef","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"Add-AzureADDirectoryRoleMember","AzureADPreview","New-MgDirectoryRoleMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, RoleManagement.ReadWrite.Directory",
-"Add-AzureADGroupMember","AzureADPreview","New-MgGroupMember","Microsoft.Graph.Groups",,,
-"Add-AzureADGroupOwner","AzureADPreview","New-MgGroupOwnerByRef","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"Add-AzureADMSAdministrativeUnitMember","AzureADPreview","New-MgDirectoryAdministrativeUnitMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Add-AzureADMSApplicationOwner","AzureADPreview","New-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Add-AzureADMScustomSecurityAttributeDefinitionAllowedValues","AzureADPreview","",,"","",
-"Add-AzureADMSFeatureRolloutPolicyDirectoryObject","AzureADPreview","",,"","",
-"Add-AzureADMSLifecyclePolicyGroup","AzureADPreview","New-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Add-AzureADMSPrivilegedResource","AzureADPreview","",,"","",
-"Add-AzureADMSScopedRoleMembership","AzureADPreview","New-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Add-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureADPreview","New-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications",,,
-"Add-AzureADScopedRoleMembership","AzureADPreview","",,"","",
-"Add-AzureADServicePrincipalOwner","AzureADPreview","New-MgServicePrincipalOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Add-AzureADServicePrincipalPolicy","AzureADPreview","",,"","",
-"Close-AzureADMSPrivilegedRoleAssignmentRequest","AzureADPreview","",,"","",
-"Confirm-AzureADDomain","AzureADPreview","Confirm-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Connect-AzureAD","AzureADPreview","Connect-MgGraph","Microsoft.Graph.Authentication",,,
-"Disconnect-AzureAD","AzureADPreview","Disconnect-MgGraph","Microsoft.Graph.Authentication",,,
-"Enable-AzureADDirectoryRole","AzureADPreview","New-MgDirectoryRoleTemplate","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Get-AzureADAdministrativeUnit","AzureADPreview","",,"","",
-"Get-AzureADAdministrativeUnitMember","AzureADPreview","",,"","",
-"Get-AzureADApplication","AzureADPreview","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Get-AzureADApplicationExtensionProperty","AzureADPreview","Get-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.Read.All",
-"Get-AzureADApplicationKeyCredential","AzureADPreview","",,"","",
-"Get-AzureADApplicationLogo","AzureADPreview","Get-MgApplicationLogo","Microsoft.Graph.Applications",,,
-"Get-AzureADApplicationOwner","AzureADPreview","Get-MgApplicationOwner","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADApplicationPasswordCredential","AzureADPreview","",,"","",
-"Get-AzureADApplicationPolicy","AzureADPreview","",,"","",
-"Get-AzureADApplicationProxyApplication","AzureADPreview","",,"","",
-"Get-AzureADApplicationProxyApplicationConnectorGroup","AzureADPreview","",,"","",
-"Get-AzureADApplicationProxyConnector","AzureADPreview","",,"","",
-"Get-AzureADApplicationProxyConnectorGroup","AzureADPreview","",,"","",
-"Get-AzureADApplicationProxyConnectorGroupMembers","AzureADPreview","",,"","",
-"Get-AzureADApplicationProxyConnectorMemberOf","AzureADPreview","",,"","",
-"Get-AzureADApplicationServiceEndpoint","AzureADPreview","",,"","",
-"Get-AzureADApplicationSignInDetailedSummary","AzureADPreview","",,"","",
-"Get-AzureADApplicationSignInSummary","AzureADPreview","",,"","",
-"Get-AzureADAuditDirectoryLogs","AzureADPreview","",,"","",
-"Get-AzureADAuditSignInLogs","AzureADPreview","",,"","",
-"Get-AzureADContact","AzureADPreview","Get-MgContact","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, OrgContact.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, OrgContact.Read.All",
-"Get-AzureADContactDirectReport","AzureADPreview","Get-MgContactDirectReport","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Get-AzureADContactManager","AzureADPreview","Get-MgContactManager","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Get-AzureADContactMembership","AzureADPreview","Get-MgContactMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Get-AzureADContactThumbnailPhoto","AzureADPreview","",,"","",
-"Get-AzureADContract","AzureADPreview","Get-MgContract","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADCurrentSessionInfo","AzureADPreview","Get-MgContext","Microsoft.Graph.Authentication",,,
-"Get-AzureADDeletedApplication","AzureADPreview","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADDevice","AzureADPreview","Get-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All, Directory.ReadWrite.All","Device.Read.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Get-AzureADDeviceConfiguration","AzureADPreview","Get-MgDeviceManagementDeviceConfiguration","Microsoft.Graph.DeviceManagement","DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All","DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All",
-"Get-AzureADDeviceRegisteredOwner","AzureADPreview","Get-MgDeviceRegisteredOwner","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All, Directory.Read.All, Directory.ReadWrite.All","Device.Read.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADDeviceRegisteredUser","AzureADPreview","Get-MgDeviceRegisteredUser","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All, Directory.Read.All, Directory.ReadWrite.All","Device.Read.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADDirectoryRole","AzureADPreview","Get-MgDirectoryRole","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-AzureADDirectoryRoleMember","AzureADPreview","Get-MgDirectoryRoleMember","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-AzureADDirectoryRoleTemplate","AzureADPreview","Get-MgDirectoryRoleTemplate","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory",
-"Get-AzureADDirectorySetting","AzureADPreview","",,"","",
-"Get-AzureADDirectorySettingTemplate","AzureADPreview","",,"","",
-"Get-AzureADDomain","AzureADPreview","Get-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Domain.Read.All, Domain.ReadWrite.All","Directory.Read.All, Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADDomainNameReference","AzureADPreview","Get-MgDomainDomainNameReferenceByRef","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All, Domain.ReadWrite.All","Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADDomainServiceConfigurationRecord","AzureADPreview","Get-MgDomainServiceConfigurationRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All, Domain.ReadWrite.All","Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADDomainVerificationDnsRecord","AzureADPreview","Get-MgDomainVerificationDnsRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All, Domain.ReadWrite.All","Domain.Read.All, Domain.ReadWrite.All",
-"Get-AzureADExtensionProperty","AzureADPreview","Get-MgDirectoryObjectAvailableExtensionProperty","Microsoft.Graph.DirectoryObjects",,,
-"Get-AzureADExternalDomainFederation","AzureADPreview","",,"","",
-"Get-AzureADGroup","AzureADPreview","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All",
-"Get-AzureADGroupAppRoleAssignment","AzureADPreview","Get-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADGroupMember","AzureADPreview","Get-MgGroupMember","Microsoft.Graph.Groups","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All",
-"Get-AzureADGroupOwner","AzureADPreview","Get-MgGroupOwner","Microsoft.Graph.Groups","Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All",
-"Get-AzureADMSAdministrativeUnit","AzureADPreview","Get-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSAdministrativeUnitMember","AzureADPreview","Get-MgDirectoryAdministrativeUnitMember","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AdministrativeUnit.Read.All, AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSApplication","AzureADPreview","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All",
-"Get-AzureADMSApplicationExtensionProperty","AzureADPreview","Get-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All","Application.Read.All, Application.ReadWrite.All, Directory.Read.All",
-"Get-AzureADMSApplicationOwner","AzureADPreview","Get-MgApplicationOwner","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSApplicationTemplate","AzureADPreview","",,"","",
-"Get-AzureADMSAttributeSet","AzureADPreview","",,"","",
-"Get-AzureADMSAuthorizationPolicy","AzureADPreview","",,"","",
-"Get-AzureADMSConditionalAccessPolicy","AzureADPreview","Get-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.All","Policy.Read.All",
-"Get-AzureADMSCustomSecurityAttributeDefinition","AzureADPreview","",,"","",
-"Get-AzureADMSCustomSecurityAttributeDefinitionAllowedValue","AzureADPreview","",,"","",
-"Get-AzureADMSDeletedDirectoryObject","AzureADPreview","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADMSDeletedGroup","AzureADPreview","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADMSFeatureRolloutPolicy","AzureADPreview","",,"","",
-"Get-AzureADMSGroup","AzureADPreview","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All",
-"Get-AzureADMSGroupLifecyclePolicy","AzureADPreview","Get-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.Read.All, Directory.ReadWrite.All","Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSGroupPermissionGrant","AzureADPreview","",,"","",
-"Get-AzureADMSIdentityProvider","AzureADPreview","Get-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.Read.All, IdentityProvider.ReadWrite.All","IdentityProvider.Read.All, IdentityProvider.ReadWrite.All",
-"Get-AzureADMSLifecyclePolicyGroup","AzureADPreview","",,"","",
-"Get-AzureADMSNamedLocationPolicy","AzureADPreview","Get-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All","Policy.Read.All",
-"Get-AzureADMSPasswordSingleSignOnCredential","AzureADPreview","",,"","",
-"Get-AzureADMSPermissionGrantConditionSet","AzureADPreview","Get-MgPolicyPermissionGrantPolicyInclude, Get-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns","Directory.Read.All, Policy.Read.PermissionGrant","Directory.Read.All, Policy.Read.PermissionGrant",
-"Get-AzureADMSPermissionGrantPolicy","AzureADPreview","Get-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.PermissionGrant, Policy.ReadWrite.PermissionGrant","Policy.Read.PermissionGrant, Policy.ReadWrite.PermissionGrant",
-"Get-AzureADMSPrivilegedResource","AzureADPreview","",,"","",
-"Get-AzureADMSPrivilegedRoleAssignment","AzureADPreview","",,"","",
-"Get-AzureADMSPrivilegedRoleAssignmentRequest","AzureADPreview","",,"","",
-"Get-AzureADMSPrivilegedRoleDefinition","AzureADPreview","",,"","",
-"Get-AzureADMSPrivilegedRoleSetting","AzureADPreview","",,"","",
-"Get-AzureADMSRoleAssignment","AzureADPreview","",,"","",
-"Get-AzureADMSRoleDefinition","AzureADPreview","",,"","",
-"Get-AzureADMSScopedRoleMembership","AzureADPreview","Get-MgUserScopedRoleMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADMSServicePrincipal","AzureADPreview","",,"","",
-"Get-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureADPreview","Get-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications","Application.Read.All, Directory.Read.All","Application.Read.All, Directory.Read.All",
-"Get-AzureADMSTrustFrameworkPolicy","AzureADPreview","",,"","",
-"Get-AzureADMSUser","AzureADPreview","",,"","",
-"Get-AzureADOAuth2PermissionGrant","AzureADPreview","Get-MgOauth2PermissionGrant","Microsoft.Graph.Identity.SignIns","DelegatedPermissionGrant.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADObjectByObjectId","AzureADPreview","Get-MgDirectoryObjectById","Microsoft.Graph.DirectoryObjects",,,
-"Get-AzureADObjectSetting","AzureADPreview","",,"","",
-"Get-AzureADPolicy","AzureADPreview","",,"","",
-"Get-AzureADPolicyAppliedObject","AzureADPreview","",,"","",
-"Get-AzureADPrivilegedRole","AzureADPreview","",,"","",
-"Get-AzureADPrivilegedRoleAssignment","AzureADPreview","",,"","",
-"Get-AzureADScopedRoleMembership","AzureADPreview","",,"","",
-"Get-AzureADServiceAppRoleAssignedTo","AzureADPreview","Get-MgServicePrincipalAppRoleAssignedTo","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServiceAppRoleAssignment","AzureADPreview","Get-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipal","AzureADPreview","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalCreatedObject","AzureADPreview","Get-MgServicePrincipalCreatedObject","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalKeyCredential","AzureADPreview","",,"","",
-"Get-AzureADServicePrincipalMembership","AzureADPreview","Get-MgServicePrincipalTransitiveMemberOf","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalOAuth2PermissionGrant","AzureADPreview","Get-MgServicePrincipalOauth2PermissionGrant","Microsoft.Graph.Applications","DelegatedPermissionGrant.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalOwnedObject","AzureADPreview","Get-MgServicePrincipalOwnedObject","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalOwner","AzureADPreview","Get-MgServicePrincipalOwner","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADServicePrincipalPasswordCredential","AzureADPreview","",,"","",
-"Get-AzureADServicePrincipalPolicy","AzureADPreview","",,"","",
-"Get-AzureADSubscribedSku","AzureADPreview","Get-MgSubscribedSku","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All",
-"Get-AzureADTenantDetail","AzureADPreview","Get-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All, User.Read",
-"Get-AzureADTrustedCertificateAuthority","AzureADPreview","",,"","",
-"Get-AzureADUser","AzureADPreview","Get-MgUser","Microsoft.Graph.Users","DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.Read.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadBasic.All, User.ReadWrite.All, User.Read, User.ReadWrite",
-"Get-AzureADUserAppRoleAssignment","AzureADPreview","Get-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADUserCreatedObject","AzureADPreview","Get-MgUserCreatedObject","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite, User.ReadWrite.All",
-"Get-AzureADUserDirectReport","AzureADPreview","Get-MgUserDirectReport","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserExtension","AzureADPreview","Get-MgUserExtension","Microsoft.Graph.Users",,,
-"Get-AzureADUserLicenseDetail","AzureADPreview","Get-MgUserLicenseDetail","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserManager","AzureADPreview","Get-MgUserManager","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserMembership","AzureADPreview","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All, User.Read",
-"Get-AzureADUserOAuth2PermissionGrant","AzureADPreview","Get-MgUserOauth2PermissionGrant","Microsoft.Graph.Users","DelegatedPermissionGrant.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Get-AzureADUserOwnedDevice","AzureADPreview","Get-MgUserOwnedDevice","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserOwnedObject","AzureADPreview","Get-MgUserOwnedObject","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserRegisteredDevice","AzureADPreview","Get-MgUserRegisteredDevice","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, User.Read, User.Read.All, User.ReadWrite.All",
-"Get-AzureADUserThumbnailPhoto","AzureADPreview","Get-MgUserPhoto","Microsoft.Graph.Users",,"User.Read",
-"Get-CrossCloudVerificationCode","AzureADPreview","",,"","",
-"Get-RbacApplicationRoleAssignment","AzureADPreview","",,"","",
-"Get-RbacApplicationRoleDefinition","AzureADPreview","",,"","",
-"New-AzureADAdministrativeUnit","AzureADPreview","",,"","",
-"New-AzureADApplication","AzureADPreview","New-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADApplicationExtensionProperty","AzureADPreview","New-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADApplicationKeyCredential","AzureADPreview","Add-MgApplicationKey","Microsoft.Graph.Applications",,,
-"New-AzureADApplicationPasswordCredential","AzureADPreview","Add-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADApplicationProxyApplication","AzureADPreview","",,"","",
-"New-AzureADApplicationProxyConnectorGroup","AzureADPreview","",,"","",
-"New-AzureADDevice","AzureADPreview","New-MgDevice","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"New-AzureADDirectorySetting","AzureADPreview","",,"","",
-"New-AzureADDomain","AzureADPreview","New-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"New-AzureADExternalDomainFederation","AzureADPreview","",,"","",
-"New-AzureADGroup","AzureADPreview","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"New-AzureADGroupAppRoleAssignment","AzureADPreview","New-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSAdministrativeUnit","AzureADPreview","New-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSAdministrativeUnitMember","AzureADPreview","",,"","",
-"New-AzureADMSApplication","AzureADPreview","New-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSApplicationExtensionProperty","AzureADPreview","New-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSApplicationFromApplicationTemplate","AzureADPreview","",,"","",
-"New-AzureADMSApplicationKey","AzureADPreview","Add-MgApplicationKey","Microsoft.Graph.Applications",,,
-"New-AzureADMSApplicationPassword","AzureADPreview","Add-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADMSAttributeSet","AzureADPreview","",,"","",
-"New-AzureADMSConditionalAccessPolicy","AzureADPreview","New-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"New-AzureADMSCustomSecurityAttributeDefinition","AzureADPreview","",,"","",
-"New-AzureADMSFeatureRolloutPolicy","AzureADPreview","",,"","",
-"New-AzureADMSGroup","AzureADPreview","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"New-AzureADMSGroupLifecyclePolicy","AzureADPreview","New-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"New-AzureADMSIdentityProvider","AzureADPreview","New-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","IdentityProvider.ReadWrite.All",
-"New-AzureADMSInvitation","AzureADPreview","New-MgInvitation","Microsoft.Graph.Identity.SignIns","Directory.ReadWrite.All, User.Invite.All, User.ReadWrite.All","Directory.ReadWrite.All, User.Invite.All, User.ReadWrite.All",
-"New-AzureADMSNamedLocationPolicy","AzureADPreview","New-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"New-AzureADMSPasswordSingleSignOnCredential","AzureADPreview","",,"","",
-"New-AzureADMSPermissionGrantConditionSet","AzureADPreview","New-MgPolicyPermissionGrantPolicyInclude, New-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","Policy.ReadWrite.PermissionGrant",
-"New-AzureADMSPermissionGrantPolicy","AzureADPreview","",,"","",
-"New-AzureADMSRoleAssignment","AzureADPreview","",,"","",
-"New-AzureADMSRoleDefinition","AzureADPreview","",,"","",
-"New-AzureADMSServicePrincipal","AzureADPreview","",,"","",
-"New-AzureADMSTrustFrameworkPolicy","AzureADPreview","",,"","",
-"New-AzureADMSUser","AzureADPreview","",,"","",
-"New-AzureADObjectSetting","AzureADPreview","",,"","",
-"New-AzureADPolicy","AzureADPreview","",,"","",
-"New-AzureADPrivilegedRoleAssignment","AzureADPreview","",,"","",
-"New-AzureADServiceAppRoleAssignment","AzureADPreview","New-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All, Directory.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"New-AzureADServicePrincipal","AzureADPreview","New-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADServicePrincipalKeyCredential","AzureADPreview","New-MgPolicyPermissionGrantPolicy, Add-MgServicePrincipalKey","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"New-AzureADServicePrincipalPasswordCredential","AzureADPreview","Add-MgServicePrincipalPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"New-AzureADTrustedCertificateAuthority","AzureADPreview","",,"","",
-"New-AzureADUser","AzureADPreview","New-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.ReadWrite.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ReadWrite.All",
-"New-AzureADUserAppRoleAssignment","AzureADPreview","New-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"New-RbacApplicationRoleAssignment","AzureADPreview","",,"","",
-"New-RbacApplicationRoleDefinition","AzureADPreview","",,"","",
-"Open-AzureADMSPrivilegedRoleAssignmentRequest","AzureADPreview","",,"","",
-"Remove-AzureADAdministrativeUnit","AzureADPreview","",,"","",
-"Remove-AzureADAdministrativeUnitMember","AzureADPreview","",,"","",
-"Remove-AzureADApplication","AzureADPreview","Remove-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADApplicationExtensionProperty","AzureADPreview","Remove-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADApplicationKeyCredential","AzureADPreview","Remove-MgApplicationKey","Microsoft.Graph.Applications",,,
-"Remove-AzureADApplicationOwner","AzureADPreview","",,"","",
-"Remove-AzureADApplicationPasswordCredential","AzureADPreview","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADApplicationPolicy","AzureADPreview","",,"","",
-"Remove-AzureADApplicationProxyApplication","AzureADPreview","",,"","",
-"Remove-AzureADApplicationProxyApplicationConnectorGroup","AzureADPreview","",,"","",
-"Remove-AzureADApplicationProxyConnectorGroup","AzureADPreview","",,"","",
-"Remove-AzureADContact","AzureADPreview","Remove-MgContact","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADContactManager","AzureADPreview","Remove-MgContactManagerByRef","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADDeletedApplication","AzureADPreview","Remove-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.ReadWrite.All, Directory.ReadWrite.All, Group.ReadWrite.All, User.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All, User.ReadWrite.All",
-"Remove-AzureADDevice","AzureADPreview","Remove-MgDevice","Microsoft.Graph.Identity.DirectoryManagement",,"Directory.AccessAsUser.All",
-"Remove-AzureADDeviceRegisteredOwner","AzureADPreview","",,"","",
-"Remove-AzureADDeviceRegisteredUser","AzureADPreview","",,"","",
-"Remove-AzureADDirectoryRoleMember","AzureADPreview","Remove-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADDirectorySetting","AzureADPreview","",,"","",
-"Remove-AzureADDomain","AzureADPreview","Remove-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Remove-AzureADExternalDomainFederation","AzureADPreview","",,"","",
-"Remove-AzureADGroup","AzureADPreview","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","Directory.AccessAsUser.All, Group.ReadWrite.All",
-"Remove-AzureADGroupAppRoleAssignment","AzureADPreview","Remove-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADGroupMember","AzureADPreview","",,"","",
-"Remove-AzureADGroupOwner","AzureADPreview","",,"","",
-"Remove-AzureADMSAdministrativeUnit","AzureADPreview","Remove-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSAdministrativeUnitMember","AzureADPreview","Remove-MgDirectoryAdministrativeUnitScopedRoleMember","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","Directory.AccessAsUser.All, RoleManagement.ReadWrite.Directory",
-"Remove-AzureADMSApplication","AzureADPreview","Remove-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSApplicationExtensionProperty","AzureADPreview","Remove-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSApplicationKey","AzureADPreview","Remove-MgApplicationKey","Microsoft.Graph.Applications",,,
-"Remove-AzureADMSApplicationOwner","AzureADPreview","",,"","",
-"Remove-AzureADMSApplicationPassword","AzureADPreview","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADMSApplicationVerifiedPublisher","AzureADPreview","",,"","",
-"Remove-AzureADMSConditionalAccessPolicy","AzureADPreview","Remove-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Remove-AzureADMSDeletedDirectoryObject","AzureADPreview","Remove-MgDirectoryObject","Microsoft.Graph.DirectoryObjects",,"Directory.AccessAsUser.All",
-"Remove-AzureADMSFeatureRolloutPolicy","AzureADPreview","",,"","",
-"Remove-AzureADMSFeatureRolloutPolicyDirectoryObject","AzureADPreview","",,"","",
-"Remove-AzureADMSGroup","AzureADPreview","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","Directory.AccessAsUser.All, Group.ReadWrite.All",
-"Remove-AzureADMSGroupLifecyclePolicy","AzureADPreview","Remove-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Remove-AzureADMSIdentityProvider","AzureADPreview","Remove-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","IdentityProvider.ReadWrite.All",
-"Remove-AzureADMSLifecyclePolicyGroup","AzureADPreview","Remove-MgGroupFromLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Remove-AzureADMSNamedLocationPolicy","AzureADPreview","Remove-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Remove-AzureADMSPasswordSingleSignOnCredential","AzureADPreview","",,"","",
-"Remove-AzureADMSPermissionGrantConditionSet","AzureADPreview","Remove-MgPolicyPermissionGrantPolicyInclude, Remove-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns",,,
-"Remove-AzureADMSPermissionGrantPolicy","AzureADPreview","Remove-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","Policy.ReadWrite.PermissionGrant",
-"Remove-AzureADMSRoleAssignment","AzureADPreview","",,"","",
-"Remove-AzureADMSRoleDefinition","AzureADPreview","",,"","",
-"Remove-AzureADMSScopedRoleMembership","AzureADPreview","Remove-MgUserScopedRoleMemberOf","Microsoft.Graph.Identity.DirectoryManagement",,,
-"Remove-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureADPreview","Remove-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications",,,
-"Remove-AzureADMSTrustFrameworkPolicy","AzureADPreview","",,"","",
-"Remove-AzureADOAuth2PermissionGrant","AzureADPreview","Remove-MgOauth2PermissionGrant","Microsoft.Graph.Identity.SignIns","DelegatedPermissionGrant.ReadWrite.All, Directory.ReadWrite.All","DelegatedPermissionGrant.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Remove-AzureADObjectSetting","AzureADPreview","",,"","",
-"Remove-AzureADPolicy","AzureADPreview","",,"","",
-"Remove-AzureADScopedRoleMembership","AzureADPreview","",,"","",
-"Remove-AzureADServiceAppRoleAssignment","AzureADPreview","Remove-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADServicePrincipal","AzureADPreview","Remove-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADServicePrincipalKeyCredential","AzureADPreview","Remove-MgServicePrincipalKey","Microsoft.Graph.Applications","Application.ReadWrite.All, Directory.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Remove-AzureADServicePrincipalOwner","AzureADPreview","",,"","",
-"Remove-AzureADServicePrincipalPasswordCredential","AzureADPreview","Remove-MgServicePrincipalPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADServicePrincipalPolicy","AzureADPreview","",,"","",
-"Remove-AzureADTrustedCertificateAuthority","AzureADPreview","",,"","",
-"Remove-AzureADUser","AzureADPreview","Remove-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, User.ReadWrite.All",
-"Remove-AzureADUserAppRoleAssignment","AzureADPreview","Remove-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","AppRoleAssignment.ReadWrite.All, Directory.AccessAsUser.All",
-"Remove-AzureADUserExtension","AzureADPreview","Remove-MgUserExtension","Microsoft.Graph.Users",,,
-"Remove-AzureADUserManager","AzureADPreview","Remove-MgUserManagerByRef","Microsoft.Graph.Users",,,
-"Remove-RbacApplicationRoleAssignment","AzureADPreview","",,"","",
-"Remove-RbacApplicationRoleDefinition","AzureADPreview","",,"","",
-"Reset-AzureADMSLifeCycleGroup","AzureADPreview","Invoke-MgRenewGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.ReadWrite.All, Group.ReadWrite.All",
-"Restore-AzureADDeletedApplication","AzureADPreview","Restore-MgApplication","Microsoft.Graph.Applications",,,
-"Restore-AzureADMSDeletedDirectoryObject","AzureADPreview","Restore-MgDirectoryObject","Microsoft.Graph.DirectoryObjects",,,
-"Revoke-AzureADSignedInUserAllRefreshToken","AzureADPreview","",,"","",
-"Revoke-AzureADUserAllRefreshToken","AzureADPreview","Invoke-MgInvalidateUserRefreshTokenByRef",,"","",
-"Select-AzureADGroupIdsContactIsMemberOf","AzureADPreview","Get-MgContactMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All, Group.Read.All, OrgContact.Read.All","Directory.Read.All, Group.Read.All, OrgContact.Read.All",
-"Select-AzureADGroupIdsGroupIsMemberOf","AzureADPreview","Get-MgGroupMemberOf","Microsoft.Graph.Groups","Group.Read.All, GroupMember.Read.All","Group.Read.All, GroupMember.Read.All",
-"Select-AzureADGroupIdsServicePrincipalIsMemberOf","AzureADPreview","Get-MgServicePrincipalMemberOf","Microsoft.Graph.Applications","Application.Read.All, Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All","Application.Read.All, Application.ReadWrite.All, Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All",
-"Select-AzureADGroupIdsUserIsMemberOf","AzureADPreview","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All","Directory.AccessAsUser.All, Directory.Read.All, Directory.ReadWrite.All, GroupMember.Read.All, User.Read",
-"Set-AzureADAdministrativeUnit","AzureADPreview","",,"","",
-"Set-AzureADApplication","AzureADPreview","Update-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADApplicationLogo","AzureADPreview","Set-MgApplicationLogo","Microsoft.Graph.Applications",,,
-"Set-AzureADApplicationProxyApplication","AzureADPreview","",,"","",
-"Set-AzureADApplicationProxyApplicationConnectorGroup","AzureADPreview","",,"","",
-"Set-AzureADApplicationProxyApplicationCustomDomainCertificate","AzureADPreview","",,"","",
-"Set-AzureADApplicationProxyApplicationSingleSignOn","AzureADPreview","",,"","",
-"Set-AzureADApplicationProxyConnector","AzureADPreview","",,"","",
-"Set-AzureADApplicationProxyConnectorGroup","AzureADPreview","",,"","",
-"Set-AzureADDevice","AzureADPreview","Update-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All",
-"Set-AzureADDirectorySetting","AzureADPreview","",,"","",
-"Set-AzureADDomain","AzureADPreview","Update-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","Domain.ReadWrite.All",
-"Set-AzureADGroup","AzureADPreview","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"Set-AzureADMSAdministrativeUnit","AzureADPreview","Update-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","AdministrativeUnit.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADMSApplication","AzureADPreview","Update-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADMSApplicationLogo","AzureADPreview","Set-MgApplicationLogo","Microsoft.Graph.Applications",,,
-"Set-AzureADMSApplicationVerifiedPublisher","AzureADPreview","",,"","",
-"Set-AzureADMSAttributeSet","AzureADPreview","",,"","",
-"Set-AzureADMSAuthorizationPolicy","AzureADPreview","",,"","",
-"Set-AzureADMSConditionalAccessPolicy","AzureADPreview","Update-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Application.Read.All, Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Set-AzureADMSCustomSecurityAttributeDefinition","AzureADPreview","",,"","",
-"Set-AzureADMSCustomSecurityAttributeDefinitionAllowedValue","AzureADPreview","",,"","",
-"Set-AzureADMSFeatureRolloutPolicy","AzureADPreview","",,"","",
-"Set-AzureADMSGroup","AzureADPreview","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All, Group.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, Group.ReadWrite.All",
-"Set-AzureADMSGroupLifecyclePolicy","AzureADPreview","Update-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","Directory.ReadWrite.All",
-"Set-AzureADMSIdentityProvider","AzureADPreview","Update-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","IdentityProvider.ReadWrite.All",
-"Set-AzureADMSNamedLocationPolicy","AzureADPreview","Update-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All, Policy.ReadWrite.ConditionalAccess","Policy.Read.All, Policy.ReadWrite.ConditionalAccess",
-"Set-AzureADMSPasswordSingleSignOnCredential","AzureADPreview","",,"","",
-"Set-AzureADMSPermissionGrantConditionSet","AzureADPreview","Update-MgPolicyPermissionGrantPolicyInclude, Update-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns, Microsoft.Graph.Identity.SignIns",,,
-"Set-AzureADMSPermissionGrantPolicy","AzureADPreview","Update-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","Policy.ReadWrite.PermissionGrant",
-"Set-AzureADMSPrivilegedRoleAssignmentRequest","AzureADPreview","",,"","",
-"Set-AzureADMSPrivilegedRoleSetting","AzureADPreview","",,"","",
-"Set-AzureADMSRoleDefinition","AzureADPreview","",,"","",
-"Set-AzureADMSServicePrincipal","AzureADPreview","",,"","",
-"Set-AzureADMSTrustFrameworkPolicy","AzureADPreview","",,"","",
-"Set-AzureADMSUser","AzureADPreview","",,"","",
-"Set-AzureADObjectSetting","AzureADPreview","",,"","",
-"Set-AzureADPolicy","AzureADPreview","",,"","",
-"Set-AzureADServicePrincipal","AzureADPreview","Update-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","Application.ReadWrite.All, Directory.AccessAsUser.All",
-"Set-AzureADTenantDetail","AzureADPreview","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementServiceConfig.ReadWrite.All, Organization.ReadWrite.All","DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Organization.ReadWrite.All",
-"Set-AzureADTrustedCertificateAuthority","AzureADPreview","",,"","",
-"Set-AzureADUser","AzureADPreview","Update-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite.All","DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ManageIdentities.All, User.ReadWrite, User.ReadWrite.All",
-"Set-AzureADUserExtension","AzureADPreview","Update-MgUserExtension","Microsoft.Graph.Users",,,
-"Set-AzureADUserLicense","AzureADPreview","Set-MgUserLicense","Microsoft.Graph.Users.Actions","Directory.ReadWrite.All, User.ReadWrite.All","Directory.ReadWrite.All, User.ReadWrite.All",
-"Set-AzureADUserManager","AzureADPreview","Set-MgUserManagerByRef","Microsoft.Graph.Users","Directory.ReadWrite.All, User.ReadWrite.All","Directory.AccessAsUser.All, Directory.ReadWrite.All, User.ReadWrite.All",
-"Set-AzureADUserPassword","AzureADPreview","Update-MgUserPassword","Microsoft.Graph.Users.Actions",,"Directory.AccessAsUser.All",
-"Set-AzureADUserThumbnailPhoto","AzureADPreview","Set-MgUserPhotoContent","Microsoft.Graph.Users",,"User.ReadWrite",
-"Set-RbacApplicationRoleDefinition","AzureADPreview","",,"","",
-"Update-AzureADSignedInUserPassword","AzureADPreview","Update-MgUserPassword","Microsoft.Graph.Users.Actions",,"Directory.AccessAsUser.All",
+"AadCmdName","AadModuleName","GraphCmdName","GraphModuleName","GraphCmdScope","GraphUri"
+"Get-AzureADContact","AzureAD","Get-MgContact","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;OrgContact.Read.All","GET /contacts"
+"Remove-MsolServicePrincipal","MSOnline","Remove-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","DELETE /servicePrincipals/{servicePrincipal-id}"
+"Remove-MsolDevice","MSOnline","Remove-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","DELETE /devices/{device-id}"
+"New-AzureADGroupAppRoleAssignment","AzureAD","New-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","POST /groups/{group-id}/appRoleAssignments"
+"Remove-AzureADServiceAppRoleAssignment","AzureAD","Remove-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","DELETE /servicePrincipals/{servicePrincipal-id}/appRoleAssignments/{appRoleAssignment-id}"
+"Get-AzureADMSDeletedGroup","AzureAD","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","","GET /directory/deletedItems"
+"Set-AzureADUserPassword","AzureAD","Update-MgUserPassword","Microsoft.Graph.Users.Actions","Directory.AccessAsUser.All","POST /users/{user-id}/changePassword"
+"Get-AzureADExtensionProperty","AzureAD","Get-MgDirectoryObjectAvailableExtensionProperty","Microsoft.Graph.DirectoryObjects","","POST /directoryObjects/getAvailableExtensionProperties"
+"Get-MsolUserRole","MSOnline","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;GroupMember.Read.All;User.Read","GET /users/{user-id}/memberOf"
+"Remove-AzureADContact","AzureAD","Remove-MgContact","Microsoft.Graph.Identity.DirectoryManagement","","DELETE /contacts/{orgContact-id}"
+"Get-AzureADApplicationOwner","AzureAD","Get-MgApplicationOwner","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /applications/{application-id}/owners"
+"Remove-AzureADMSPermissionGrantPolicy","AzureAD","Remove-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","DELETE /policies/permissionGrantPolicies/{permissionGrantPolicy-id}"
+"New-AzureADApplicationExtensionProperty","AzureAD","New-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/extensionProperties"
+"Remove-AzureADApplicationProxyConnectorGroup","AzureAD","","","",""
+"Remove-AzureADGroupAppRoleAssignment","AzureAD","Remove-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","DELETE /groups/{group-id}/appRoleAssignments/{appRoleAssignment-id}"
+"Set-MsolCompanySecurityComplianceContactInformation","MSOnline","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementConfiguration.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Organization.ReadWrite.All","PATCH /organization/{organization-id}"
+"Set-AzureADMSApplication","AzureAD","Update-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","PATCH /applications/{application-id}"
+"Remove-AzureADMSAdministrativeUnitMember","AzureAD","Remove-MgDirectoryAdministrativeUnitScopedRoleMember","Microsoft.Graph.Identity.DirectoryManagement","","DELETE /directory/administrativeUnits/{administrativeUnit-id}/scopedRoleMembers/{scopedRoleMembership-id}"
+"Get-MsolPartnerInformation","MSOnline","","","",""
+"New-AzureADDevice","AzureAD","New-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","POST /devices"
+"New-MsolLicenseOptions","MSOnline","Set-MgUserLicense","Microsoft.Graph.Users.Actions","Directory.ReadWrite.All;User.ReadWrite.All","POST /users/{user-id}/assignLicense"
+"Set-AzureADUser","AzureAD","Update-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All;DeviceManagementConfiguration.ReadWrite.All;DeviceManagementManagedDevices.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Directory.ReadWrite.All;User.ManageIdentities.All;User.ReadWrite;User.ReadWrite.All","PATCH /users/{user-id}"
+"Remove-AzureADMSApplication","AzureAD","Remove-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","DELETE /applications/{application-id}"
+"Remove-MsolGroup","MSOnline","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","DELETE /groups/{group-id}"
+"Set-AzureADMSPermissionGrantPolicy","AzureAD","Update-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","PATCH /policies/permissionGrantPolicies/{permissionGrantPolicy-id}"
+"Get-AzureADApplicationProxyConnector","AzureAD","","","",""
+"Remove-AzureADGroup","AzureAD","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","DELETE /groups/{group-id}"
+"Get-AzureADApplicationServiceEndpoint","AzureAD","Get-MgServicePrincipalEndpoint","Microsoft.Graph.Applications","","GET /servicePrincipals/{servicePrincipal-id}/endpoints"
+"Confirm-MsolEmailVerifiedDomain","MSOnline","","","",""
+"Get-AzureADUserMembership","AzureAD","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;GroupMember.Read.All;User.Read","GET /users/{user-id}/memberOf"
+"Remove-AzureADMSLifecyclePolicyGroup","AzureAD","Remove-MgGroupFromLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","POST /groupLifecyclePolicies/{groupLifecyclePolicy-id}/removeGroup"
+"Get-AzureADContactMembership","AzureAD","Get-MgContactMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All","GET /contacts/{orgContact-id}/memberOf"
+"Get-MsolFederationProperty","MSOnline","","","",""
+"Get-AzureADMSApplicationExtensionProperty","AzureAD","Get-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All","GET /applications/{application-id}/extensionProperties"
+"Remove-AzureADServicePrincipalKeyCredential","AzureAD","Remove-MgServicePrincipalKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /servicePrincipals/{servicePrincipal-id}/removeKey"
+"Remove-MsolApplicationPassword","MSOnline","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/removePassword"
+"Get-AzureADUserThumbnailPhoto","AzureAD","Get-MgUserPhoto","Microsoft.Graph.Users","User.Read","GET /users/{user-id}/photos"
+"Set-AzureADGroup","AzureAD","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","PATCH /groups/{group-id}"
+"Get-MsolServicePrincipal","MSOnline","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals"
+"Get-AzureADMSApplication","AzureAD","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All","GET /applications"
+"Get-MsolAdministrativeUnit","MSOnline","Get-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All;AdministrativeUnit.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /directory/administrativeUnits"
+"Get-AzureADMSScopedRoleMembership","AzureAD","Get-MgUserScopedRoleMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All","GET /users/{user-id}/scopedRoleMemberOf"
+"New-AzureADMSApplicationExtensionProperty","AzureAD","New-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/extensionProperties"
+"Add-MsolForeignGroupToRole","MSOnline","","","",""
+"Add-AzureADMSAdministrativeUnitMember","AzureAD","New-MgDirectoryAdministrativeUnitMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","","POST /directory/administrativeUnits/{administrativeUnit-id}/members/$ref"
+"Remove-MsolServicePrincipalCredential","MSOnline","Remove-MgServicePrincipalKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /servicePrincipals/{servicePrincipal-id}/removeKey"
+"Get-AzureADContract","AzureAD","Get-MgContract","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All","GET /contracts"
+"Get-AzureADGroupMember","AzureAD","Get-MgGroupMember","Microsoft.Graph.Groups","Directory.Read.All;Group.Read.All;Group.ReadWrite.All;GroupMember.Read.All;GroupMember.ReadWrite.All","GET /groups/{group-id}/members"
+"Reset-MsolStrongAuthenticationMethodByUpn","MSOnline","","","",""
+"Remove-MsolGroupMember","MSOnline","Remove-MgGroupMemberByRef","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All;GroupMember.ReadWrite.All","DELETE /groups/{group-id}/members/{directoryObject-id}/$ref"
+"Get-AzureADUserManager","AzureAD","Get-MgUserManager","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read.All;User.ReadWrite.All","GET /users/{user-id}/manager"
+"Update-AzureADSignedInUserPassword","AzureAD","Update-MgUserPassword","Microsoft.Graph.Users.Actions","Directory.AccessAsUser.All","POST /users/{user-id}/changePassword"
+"Restore-AzureADMSDeletedDirectoryObject","AzureAD","Restore-MgDirectoryObject","","",""
+"Remove-AzureADMSApplicationKey","AzureAD","Remove-MgApplicationKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /applications/{application-id}/removeKey"
+"New-AzureADMSIdentityProvider","AzureAD","New-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","POST /identity/identityProviders"
+"Set-MsolPasswordPolicy","MSOnline","","","",""
+"Get-AzureADContactDirectReport","AzureAD","Get-MgContactDirectReport","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Group.Read.All;OrgContact.Read.All","GET /contacts/{orgContact-id}/directReports"
+"Remove-AzureADApplication","AzureAD","Remove-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","DELETE /applications/{application-id}"
+"Get-AzureADDirectoryRoleMember","AzureAD","Get-MgDirectoryRoleMember","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /directoryRoles/{directoryRole-id}/members"
+"Get-AzureADServicePrincipalKeyCredential","AzureAD","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals"
+"Remove-AzureADUserAppRoleAssignment","AzureAD","Remove-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","DELETE /users/{user-id}/appRoleAssignments/{appRoleAssignment-id}"
+"Get-AzureADCurrentSessionInfo","AzureAD","Get-MgContext","Microsoft.Graph.Authentication","",""
+"New-AzureADServicePrincipalPasswordCredential","AzureAD","Add-MgServicePrincipalPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /servicePrincipals/{servicePrincipal-id}/addPassword"
+"Get-AzureADMSAdministrativeUnitMember","AzureAD","Get-MgDirectoryAdministrativeUnitMember","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All;AdministrativeUnit.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /directory/administrativeUnits/{administrativeUnit-id}/members"
+"Get-AzureADApplicationExtensionProperty","AzureAD","Get-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All","GET /applications/{application-id}/extensionProperties"
+"Remove-AzureADTrustedCertificateAuthority","AzureAD","","","",""
+"Remove-AzureADMSApplicationExtensionProperty","AzureAD","Remove-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","DELETE /applications/{application-id}/extensionProperties/{extensionProperty-id}"
+"Remove-AzureADServicePrincipalOwner","AzureAD","Remove-MgServicePrincipalOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","DELETE /servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/$ref"
+"Set-AzureADMSAuthorizationPolicy","AzureAD","Update-MgPolicyAuthorizationPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.Authorization","PATCH /policies/authorizationPolicy"
+"Get-MsolCompanyInformation","MSOnline","Get-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementConfiguration.Read.All;DeviceManagementConfiguration.ReadWrite.All;DeviceManagementServiceConfig.Read.All;DeviceManagementServiceConfig.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All;Organization.Read.All;Organization.ReadWrite.All;User.Read","GET /organization"
+"Get-MsolDomainVerificationDns","MSOnline","Get-MgDomainVerificationDnsRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All;Domain.ReadWrite.All","GET /domains/{domain-id}/verificationDnsRecords"
+"New-AzureADServicePrincipalKeyCredential","AzureAD","Add-MgServicePrincipalKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /servicePrincipals/{servicePrincipal-id}/addKey"
+"Get-MsolDomainFederationSettings","MSOnline","Get-MgDomainFederationConfiguration","Microsoft.Graph.Identity.DirectoryManagement","","GET /domains/{domain-id}/federationConfiguration"
+"Add-AzureADMSLifecyclePolicyGroup","AzureAD","New-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","POST /groupLifecyclePolicies"
+"Set-MsolUserPrincipalName","MSOnline","Update-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All;DeviceManagementConfiguration.ReadWrite.All;DeviceManagementManagedDevices.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Directory.ReadWrite.All;User.ManageIdentities.All;User.ReadWrite;User.ReadWrite.All","PATCH /users/{user-id}"
+"Remove-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureAD","Remove-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications","Policy.ReadWrite.PermissionGrant","DELETE /servicePrincipals/{servicePrincipal-id}/delegatedPermissionClassifications/{delegatedPermissionClassification-id}"
+"Confirm-AzureADDomain","AzureAD","Confirm-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains/{domain-id}/verify"
+"Get-AzureADDeletedApplication","AzureAD","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","","GET /directory/deletedItems"
+"Remove-MsolUser","MSOnline","Remove-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All;DeviceManagementConfiguration.ReadWrite.All;DeviceManagementManagedDevices.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;User.ReadWrite.All","DELETE /users/{user-id}"
+"Remove-AzureADMSRoleDefinition","AzureAD","Remove-MgRoleManagementDirectoryRoleDefinition","Microsoft.Graph.DeviceManagement.Enrolment","CloudPC.ReadWrite.All;DeviceManagementRBAC.ReadWrite.All;Directory.ReadWrite.All;RoleManagement.ReadWrite.CloudPC;RoleManagement.ReadWrite.Directory","DELETE /roleManagement/directory/roleDefinitions/{unifiedRoleDefinition-id}"
+"Add-AzureADServicePrincipalOwner","AzureAD","New-MgServicePrincipalOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.Read.All","POST /servicePrincipals/{servicePrincipal-id}/owners/$ref"
+"New-AzureADApplicationKeyCredential","AzureAD","Add-MgApplicationKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /applications/{application-id}/addKey"
+"Get-AzureADMSRoleDefinition","AzureAD","Get-MgRoleManagementDirectoryRoleDefinition","Microsoft.Graph.DeviceManagement.Enrolment","CloudPC.Read.All;CloudPC.ReadWrite.All;DeviceManagementRBAC.Read.All;DeviceManagementRBAC.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All;EntitlementManagement.Read.All;EntitlementManagement.ReadWrite.All;RoleManagement.Read.All;RoleManagement.Read.CloudPC;RoleManagement.Read.Directory;RoleManagement.ReadWrite.CloudPC;RoleManagement.ReadWrite.Directory","GET /roleManagement/directory/roleDefinitions"
+"Set-AzureADApplicationProxyApplicationConnectorGroup","AzureAD","","","",""
+"Convert-MsolFederatedUser","MSOnline","","","",""
+"Remove-AzureADMSPermissionGrantConditionSet","AzureAD","Remove-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","DELETE /policies/permissionGrantPolicies/{permissionGrantPolicy-id}/excludes/{permissionGrantConditionSet-id}"
+"Get-AzureADServicePrincipal","AzureAD","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals"
+"Set-AzureADMSGroup","AzureAD","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","PATCH /groups/{group-id}"
+"Get-AzureADMSGroupLifecyclePolicy","AzureAD","Get-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.Read.All;Directory.ReadWrite.All","GET /groupLifecyclePolicies"
+"Remove-AzureADApplicationOwner","AzureAD","Remove-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","DELETE /applications/{application-id}/owners/{directoryObject-id}/$ref"
+"Set-AzureADDomain","AzureAD","Update-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","PATCH /domains/{domain-id}"
+"Set-AzureADTrustedCertificateAuthority","AzureAD","","","",""
+"Get-MsolSubscription","MSOnline","Get-MgSubscribedSku","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;Organization.Read.All;Organization.ReadWrite.All","GET /subscribedSkus"
+"Remove-AzureADApplicationKeyCredential","AzureAD","Remove-MgApplicationKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /applications/{application-id}/removeKey"
+"Set-MsolDomain","MSOnline","Update-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","PATCH /domains/{domain-id}"
+"Get-AzureADMSGroup","AzureAD","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All;Directory.ReadWrite.All;Group.Read.All;Group.ReadWrite.All;GroupMember.Read.All","GET /groups"
+"Set-AzureADMSAdministrativeUnit","AzureAD","Update-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","PATCH /directory/administrativeUnits/{administrativeUnit-id}"
+"Get-MsolServicePrincipalCredential","MSOnline","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals"
+"New-AzureADMSAdministrativeUnit","AzureAD","New-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","POST /directory/administrativeUnits"
+"Get-MsolGroupMember","MSOnline","Get-MgGroupMember","Microsoft.Graph.Groups","Directory.Read.All;Group.Read.All;Group.ReadWrite.All;GroupMember.Read.All;GroupMember.ReadWrite.All","GET /groups/{group-id}/members"
+"Set-AzureADApplicationProxyConnector","AzureAD","","","",""
+"Get-AzureADUserRegisteredDevice","AzureAD","Get-MgUserRegisteredDevice","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read;User.Read.All;User.ReadWrite.All","GET /users/{user-id}/registeredDevices"
+"Remove-MsolDomain","MSOnline","Remove-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","DELETE /domains/{domain-id}"
+"Add-MsolRoleMember","MSOnline","New-MgDirectoryRoleMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","POST /directoryRoles/{directoryRole-id}/members/$ref"
+"Remove-AzureADApplicationProxyApplication","AzureAD","","","",""
+"New-AzureADMSRoleDefinition","AzureAD","New-MgRoleManagementDirectoryRoleDefinition","Microsoft.Graph.DeviceManagement.Enrolment","CloudPC.ReadWrite.All;DeviceManagementRBAC.ReadWrite.All;Directory.ReadWrite.All;RoleManagement.ReadWrite.CloudPC;RoleManagement.ReadWrite.Directory","POST /roleManagement/directory/roleDefinitions"
+"Remove-AzureADDevice","AzureAD","Remove-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","DELETE /devices/{device-id}"
+"Get-AzureADApplicationKeyCredential","AzureAD","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All","GET /applications"
+"Add-AzureADMSApplicationOwner","AzureAD","New-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","POST /applications/{application-id}/owners/$ref"
+"Set-MsolUserLicense","MSOnline","Set-MgUserLicense","Microsoft.Graph.Users.Actions","Directory.ReadWrite.All;User.ReadWrite.All","POST /users/{user-id}/assignLicense"
+"Set-AzureADMSApplicationVerifiedPublisher","AzureAD","Set-MgApplicationVerifiedPublisher","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/setVerifiedPublisher"
+"Convert-MsolDomainToStandard","MSOnline","Remove-MgDomainFederationConfiguration","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","DELETE /domains/{domain-id}/federationConfiguration/{internalDomainFederation-id}"
+"Add-AzureADMSScopedRoleMembership","AzureAD","New-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement","","POST /directoryRoles/{directoryRole-id}/scopedMembers"
+"Set-MsolCompanyAllowedDataLocation","MSOnline","","","",""
+"Get-AzureADUserOAuth2PermissionGrant","AzureAD","Get-MgUserOauth2PermissionGrant","Microsoft.Graph.Users","DelegatedPermissionGrant.ReadWrite.All;Directory.Read.All;User.ReadBasic.All","GET /users/{user-id}/oauth2PermissionGrants"
+"Redo-MsolProvisionGroup","MSOnline","","","",""
+"Set-MsolDeviceRegistrationServicePolicy","MSOnline","","","",""
+"Remove-AzureADMSRoleAssignment","AzureAD","Remove-MgRoleManagementDirectoryRoleAssignment","Microsoft.Graph.DeviceManagement.Enrolment","EntitlementManagement.ReadWrite.All;RoleManagement.ReadWrite.Directory","DELETE /roleManagement/directory/roleAssignments/{unifiedRoleAssignment-id}"
+"Restore-AzureADDeletedApplication","AzureAD","Restore-MgApplication","","",""
+"Get-AzureADDomainVerificationDnsRecord","AzureAD","Get-MgDomainVerificationDnsRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All;Domain.ReadWrite.All","GET /domains/{domain-id}/verificationDnsRecords"
+"New-AzureADServicePrincipal","AzureAD","New-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /servicePrincipals"
+"Remove-AzureADMSConditionalAccessPolicy","AzureAD","Remove-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.All;Policy.ReadWrite.ConditionalAccess","DELETE /identity/conditionalAccess/policies/{conditionalAccessPolicy-id}"
+"Get-AzureADGroupAppRoleAssignment","AzureAD","Get-MgGroupAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /groups/{group-id}/appRoleAssignments"
+"Remove-AzureADContactManager","AzureAD","Remove-MgContactManagerByRef","","",""
+"Get-AzureADDeviceRegisteredUser","AzureAD","Get-MgDeviceRegisteredUser","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All;Directory.Read.All;Directory.ReadWrite.All","GET /devices/{device-id}/registeredUsers"
+"Set-MsolCompanySettings","MSOnline","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementConfiguration.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Organization.ReadWrite.All","PATCH /organization/{organization-id}"
+"Add-AzureADGroupOwner","AzureAD","New-MgGroupOwnerByRef","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","POST /groups/{group-id}/owners/$ref"
+"Redo-MsolProvisionUser","MSOnline","","","",""
+"New-AzureADDomain","AzureAD","New-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains"
+"New-AzureADApplicationPasswordCredential","AzureAD","Add-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/addPassword"
+"Add-MsolScopedRoleMember","MSOnline","New-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement","","POST /directoryRoles/{directoryRole-id}/scopedMembers"
+"Add-AzureADGroupMember","AzureAD","New-MgGroupMember","Microsoft.Graph.Groups","",""
+"Add-AzureADDirectoryRoleMember","AzureAD","New-MgDirectoryRoleMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","RoleManagement.ReadWrite.Directory","POST /directoryRoles/{directoryRole-id}/members/$ref"
+"Get-AzureADGroupOwner","AzureAD","Get-MgGroupOwner","Microsoft.Graph.Groups","Directory.Read.All;Group.Read.All;Group.ReadWrite.All;GroupMember.Read.All;GroupMember.ReadWrite.All","GET /groups/{group-id}/owners"
+"Remove-AzureADDomain","AzureAD","Remove-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","DELETE /domains/{domain-id}"
+"Set-MsolAdministrativeUnit","MSOnline","Update-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","PATCH /directory/administrativeUnits/{administrativeUnit-id}"
+"New-AzureADMSPermissionGrantPolicy","AzureAD","New-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","POST /policies/permissionGrantPolicies"
+"Remove-MsolScopedRoleMember","MSOnline","Remove-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement","","DELETE /directoryRoles/{directoryRole-id}/scopedMembers/{scopedRoleMembership-id}"
+"New-MsolWellKnownGroup","MSOnline","","","",""
+"Get-AzureADUserOwnedDevice","AzureAD","Get-MgUserOwnedDevice","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read;User.Read.All;User.ReadWrite.All","GET /users/{user-id}/ownedDevices"
+"Set-MsolDomainFederationSettings","MSOnline","New-MgDomainFederationConfiguration","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains/{domain-id}/federationConfiguration"
+"Get-MsolHasObjectsWithDirSyncProvisioningErrors","MSOnline","","","",""
+"Set-MsolDirSyncFeature","MSOnline","","","",""
+"Remove-AzureADGroupOwner","AzureAD","Remove-MgGroupOwnerByRef","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","DELETE /groups/{group-id}/owners/{directoryObject-id}/$ref"
+"Set-MsolCompanyMultiNationalEnabled","MSOnline","","","",""
+"Add-AzureADDeviceRegisteredUser","AzureAD","New-MgDeviceRegisteredUserByRef","","",""
+"Get-AzureADMSAdministrativeUnit","AzureAD","Get-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All;AdministrativeUnit.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /directory/administrativeUnits"
+"Get-AzureADUserCreatedObject","AzureAD","Get-MgUserCreatedObject","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read;User.Read.All;User.ReadWrite;User.ReadWrite.All","GET /users/{user-id}/createdObjects"
+"Get-AzureADServicePrincipalOwner","AzureAD","Get-MgServicePrincipalOwner","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/owners"
+"Select-AzureADGroupIdsGroupIsMemberOf","AzureAD","Get-MgGroupMemberOf","Microsoft.Graph.Groups","Directory.Read.All;Directory.ReadWrite.All;Group.Read.All;GroupMember.Read.All","GET /groups/{group-id}/memberOf"
+"Remove-MsolFederatedDomain","MSOnline","","","",""
+"Get-AzureADDevice","AzureAD","Get-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All;Directory.ReadWrite.All","GET /devices"
+"Remove-AzureADServicePrincipal","AzureAD","Remove-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","DELETE /servicePrincipals/{servicePrincipal-id}"
+"Get-MsolAccountSku","MSOnline","Get-MgSubscribedSku","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;Organization.Read.All;Organization.ReadWrite.All","GET /subscribedSkus"
+"Get-AzureADApplicationProxyConnectorGroup","AzureAD","","","",""
+"Remove-AzureADApplicationPasswordCredential","AzureAD","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/removePassword"
+"New-AzureADMSConditionalAccessPolicy","AzureAD","New-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Application.Read.All;Policy.Read.All;Policy.ReadWrite.ConditionalAccess","POST /identity/conditionalAccess/policies"
+"Set-AzureADApplicationProxyApplicationSingleSignOn","AzureAD","","","",""
+"Get-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureAD","Get-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications","Application.Read.All;Directory.Read.All","GET /servicePrincipals/{servicePrincipal-id}/delegatedPermissionClassifications"
+"Add-AzureADDeviceRegisteredOwner","AzureAD","New-MgDeviceRegisteredOwnerByRef","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","POST /devices/{device-id}/registeredOwners/$ref"
+"Select-AzureADGroupIdsServicePrincipalIsMemberOf","AzureAD","Get-MgServicePrincipalMemberOf","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/memberOf"
+"Remove-AzureADDeletedApplication","AzureAD","Remove-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","Application.ReadWrite.All;Directory.ReadWrite.All;Group.ReadWrite.All;User.ReadWrite.All","DELETE /directory/deletedItems/{directoryObject-id}"
+"Remove-AzureADUser","AzureAD","Remove-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All;DeviceManagementConfiguration.ReadWrite.All;DeviceManagementManagedDevices.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;User.ReadWrite.All","DELETE /users/{user-id}"
+"Get-AzureADMSConditionalAccessPolicy","AzureAD","Get-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.All","GET /identity/conditionalAccess/policies"
+"Set-MsolDirSyncConfiguration","MSOnline","","","",""
+"Get-MsolDirSyncFeatures","MSOnline","","","",""
+"New-AzureADApplicationProxyConnectorGroup","AzureAD","","","",""
+"Set-AzureADMSApplicationLogo","AzureAD","Set-MgApplicationLogo","Microsoft.Graph.Applications","Application.ReadWrite.All","PUT /applications/{application-id}/logo"
+"New-AzureADMSApplication","AzureAD","New-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications"
+"Get-AzureADGroup","AzureAD","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All;Directory.ReadWrite.All;Group.Read.All;Group.ReadWrite.All;GroupMember.Read.All","GET /groups"
+"Remove-AzureADMSAdministrativeUnit","AzureAD","Remove-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","DELETE /directory/administrativeUnits/{administrativeUnit-id}"
+"Get-MsolPartnerContract","MSOnline","Get-MgContract","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All","GET /contracts"
+"Get-AzureADMSGroupPermissionGrant","AzureAD","Get-MgGroupPermissionGrant","Microsoft.Graph.Groups","Group.Read.All;Group.ReadWrite.All;GroupMember.Read.All;GroupMember.ReadWrite.All","GET /groups/{group-id}/permissionGrants"
+"Get-AzureADUserOwnedObject","AzureAD","Get-MgUserOwnedObject","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read;User.Read.All;User.ReadWrite.All","GET /users/{user-id}/ownedObjects"
+"Set-AzureADMSGroupLifecyclePolicy","AzureAD","Update-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","PATCH /groupLifecyclePolicies/{groupLifecyclePolicy-id}"
+"Get-AzureADServiceAppRoleAssignment","AzureAD","Get-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/appRoleAssignments"
+"Set-AzureADUserLicense","AzureAD","Set-MgUserLicense","Microsoft.Graph.Users.Actions","Directory.ReadWrite.All;User.ReadWrite.All","POST /users/{user-id}/assignLicense"
+"Add-MsolAdministrativeUnitMember","MSOnline","New-MgDirectoryAdministrativeUnitMemberByRef","Microsoft.Graph.Identity.DirectoryManagement","","POST /directory/administrativeUnits/{administrativeUnit-id}/members/$ref"
+"New-MsolAdministrativeUnit","MSOnline","New-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","POST /directory/administrativeUnits"
+"Get-AzureADApplicationProxyConnectorGroupMembers","AzureAD","","","",""
+"Remove-AzureADServicePrincipalPasswordCredential","AzureAD","Remove-MgServicePrincipalPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /servicePrincipals/{servicePrincipal-id}/removePassword"
+"Remove-AzureADMSIdentityProvider","AzureAD","Remove-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","DELETE /identity/identityProviders/{identityProviderBase-id}"
+"Get-AzureADDomain","AzureAD","Get-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Domain.Read.All;Domain.ReadWrite.All","GET /domains"
+"Get-AzureADUserAppRoleAssignment","AzureAD","Get-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All;Directory.Read.All;User.ReadBasic.All","GET /users/{user-id}/appRoleAssignments"
+"Select-AzureADGroupIdsContactIsMemberOf","AzureAD","Get-MgContactMemberOf","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All","GET /contacts/{orgContact-id}/memberOf"
+"Get-AzureADMSPermissionGrantPolicy","AzureAD","Get-MgPolicyPermissionGrantPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.PermissionGrant;Policy.ReadWrite.PermissionGrant","GET /policies/permissionGrantPolicies"
+"Get-AzureADApplicationProxyApplication","AzureAD","","","",""
+"Set-AzureADUserManager","AzureAD","Set-MgUserManagerByRef","Microsoft.Graph.Users","Directory.ReadWrite.All;User.ReadWrite.All","PUT /users/{user-id}/manager/$ref"
+"Enable-MsolDevice","MSOnline","Update-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","PATCH /devices/{device-id}"
+"Get-AzureADUserLicenseDetail","AzureAD","Get-MgUserLicenseDetail","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read;User.Read.All;User.ReadWrite.All","GET /users/{user-id}/licenseDetails"
+"New-AzureADMSInvitation","AzureAD","New-MgInvitation","Microsoft.Graph.Identity.SignIns","Directory.ReadWrite.All;User.Invite.All;User.ReadWrite.All","POST /invitations"
+"Get-AzureADMSDeletedDirectoryObject","AzureAD","Get-MgDirectoryDeletedItem","Microsoft.Graph.Identity.DirectoryManagement","","GET /directory/deletedItems"
+"Get-MsolCompanyAllowedDataLocation","MSOnline","","","",""
+"New-AzureADUser","AzureAD","New-MgUser","Microsoft.Graph.Users","Directory.ReadWrite.All;User.ReadWrite.All","POST /users"
+"Get-AzureADServicePrincipalOAuth2PermissionGrant","AzureAD","Get-MgServicePrincipalOauth2PermissionGrant","Microsoft.Graph.Applications","DelegatedPermissionGrant.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/oauth2PermissionGrants"
+"New-AzureADMSApplicationPassword","AzureAD","Add-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/addPassword"
+"Get-MsolRole","MSOnline","Get-MgDirectoryRole","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /directoryRoles"
+"New-MsolServicePrincipalCredential","MSOnline","Add-MgServicePrincipalKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /servicePrincipals/{servicePrincipal-id}/addKey"
+"Remove-AzureADDirectoryRoleMember","AzureAD","Remove-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement","","DELETE /directoryRoles/{directoryRole-id}/scopedMembers/{scopedRoleMembership-id}"
+"Get-AzureADServicePrincipalPasswordCredential","AzureAD","Get-MgServicePrincipal","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals"
+"Get-AzureADDeviceConfiguration","AzureAD","Get-MgDeviceManagementDeviceConfiguration","Microsoft.Graph.DeviceManagement","DeviceManagementConfiguration.Read.All;DeviceManagementConfiguration.ReadWrite.All","GET /deviceManagement/deviceConfigurations"
+"Connect-AzureAD","AzureAD","Connect-MgGraph","Microsoft.Graph.Authentication","",""
+"Set-AzureADMSNamedLocationPolicy","AzureAD","Update-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All;Policy.ReadWrite.ConditionalAccess","PATCH /identity/conditionalAccess/namedLocations/{namedLocation-id}"
+"Set-MsolGroup","MSOnline","Update-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","PATCH /groups/{group-id}"
+"Get-AzureADApplicationLogo","AzureAD","Get-MgApplicationLogo","Microsoft.Graph.Applications","","GET /applications/{application-id}/logo"
+"Get-MsolDevice","MSOnline","Get-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All;Directory.ReadWrite.All","GET /devices"
+"Revoke-AzureADSignedInUserAllRefreshToken","AzureAD","Invoke-MgInvalidateUserRefreshToken","","Directory.ReadWrite.All;User.ReadWrite","POST /users/{user-id}/invalidateAllRefreshTokens"
+"Update-MsolFederatedDomain","MSOnline","","","",""
+"New-AzureADMSRoleAssignment","AzureAD","New-MgRoleManagementDirectoryRoleAssignment","Microsoft.Graph.DeviceManagement.Enrolment","EntitlementManagement.ReadWrite.All;RoleManagement.ReadWrite.Directory","POST /roleManagement/directory/roleAssignments"
+"Set-MsolCompanyContactInformation","MSOnline","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementConfiguration.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Organization.ReadWrite.All","PATCH /organization/{organization-id}"
+"Get-MsolUserByStrongAuthentication","MSOnline","Get-MgRoleManagementDirectoryRoleAssignmentScheduleRequest","Microsoft.Graph.DeviceManagement.Enrolment","RoleAssignmentSchedule.Read.Directory;RoleAssignmentSchedule.ReadWrite.Directory;RoleManagement.Read.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /roleManagement/directory/roleAssignmentScheduleRequests"
+"Remove-AzureADDeviceRegisteredUser","AzureAD","","","",""
+"Remove-AzureADMSDeletedDirectoryObject","AzureAD","Remove-MgDirectoryObject","Microsoft.Graph.DirectoryObjects","Application.ReadWrite.All;Group.ReadWrite.All;User.ReadWrite.All","DELETE /directoryObjects/{directoryObject-id}"
+"Remove-MsolForeignGroupFromRole","MSOnline","","","",""
+"Connect-MsolService","MSOnline","Connect-MgGraph","Microsoft.Graph.Authentication","",""
+"Get-AzureADMSAuthorizationPolicy","AzureAD","Get-MgPolicyAuthorizationPolicy","Microsoft.Graph.Identity.SignIns","Policy.Read.All;Policy.ReadWrite.Authorization","GET /policies/authorizationPolicy"
+"Set-AzureADApplicationProxyApplicationCustomDomainCertificate","AzureAD","","","",""
+"Get-AzureADOAuth2PermissionGrant","AzureAD","Get-MgOauth2PermissionGrant","Microsoft.Graph.Identity.SignIns","DelegatedPermissionGrant.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /oauth2PermissionGrants"
+"Get-AzureADUserExtension","AzureAD","Get-MgUserExtension","Microsoft.Graph.Users","","GET /users/{user-id}/extensions"
+"Set-AzureADMSConditionalAccessPolicy","AzureAD","Update-MgIdentityConditionalAccessPolicy","Microsoft.Graph.Identity.SignIns","Application.Read.All;Policy.Read.All;Policy.ReadWrite.ConditionalAccess","PATCH /identity/conditionalAccess/policies/{conditionalAccessPolicy-id}"
+"Set-AzureADUserThumbnailPhoto","AzureAD","Set-MgUserPhotoContent","Microsoft.Graph.Users","User.ReadWrite","PUT /users/{user-id}/photo/$value"
+"Get-MsolPasswordPolicy","MSOnline","Get-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Domain.Read.All;Domain.ReadWrite.All","GET /domains"
+"Remove-AzureADUserManager","AzureAD","Remove-MgUserManagerByRef","Microsoft.Graph.Users","","DELETE /users/{user-id}/manager/$ref"
+"Set-MsolADFSContext","MSOnline","","","",""
+"Disconnect-AzureAD","AzureAD","Disconnect-MgGraph","Microsoft.Graph.Authentication","",""
+"New-AzureADTrustedCertificateAuthority","AzureAD","","","",""
+"Remove-AzureADMSApplicationPassword","AzureAD","Remove-MgApplicationPassword","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/removePassword"
+"Remove-AzureADApplicationExtensionProperty","AzureAD","Remove-MgApplicationExtensionProperty","Microsoft.Graph.Applications","Application.ReadWrite.All","DELETE /applications/{application-id}/extensionProperties/{extensionProperty-id}"
+"Get-AzureADTenantDetail","AzureAD","Get-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementConfiguration.Read.All;DeviceManagementConfiguration.ReadWrite.All;DeviceManagementServiceConfig.Read.All;DeviceManagementServiceConfig.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All;Organization.Read.All;Organization.ReadWrite.All;User.Read","GET /organization"
+"Get-AzureADDomainServiceConfigurationRecord","AzureAD","Get-MgDomainServiceConfigurationRecord","Microsoft.Graph.Identity.DirectoryManagement","Domain.Read.All;Domain.ReadWrite.All","GET /domains/{domain-id}/serviceConfigurationRecords"
+"Get-AzureADContactThumbnailPhoto","AzureAD","","","",""
+"Remove-AzureADMSApplicationOwner","AzureAD","Remove-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","DELETE /applications/{application-id}/owners/{directoryObject-id}/$ref"
+"Get-AzureADMSRoleAssignment","AzureAD","Get-MgRoleManagementDirectoryRoleAssignment","Microsoft.Graph.DeviceManagement.Enrolment","Directory.Read.All;Directory.ReadWrite.All;EntitlementManagement.Read.All;EntitlementManagement.ReadWrite.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /roleManagement/directory/roleAssignments"
+"Set-AzureADMSRoleDefinition","AzureAD","Update-MgRoleManagementDirectoryRoleDefinition","Microsoft.Graph.DeviceManagement.Enrolment","RoleManagement.ReadWrite.Directory","PATCH /roleManagement/directory/roleDefinitions/{unifiedRoleDefinition-id}"
+"New-AzureADMSGroup","AzureAD","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","POST /groups"
+"Convert-MsolDomainToFederated","MSOnline","New-MgDomainFederationConfiguration","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains/{domain-id}/federationConfiguration"
+"Remove-MsolAdministrativeUnitMember","MSOnline","Remove-MgDirectoryAdministrativeUnitScopedRoleMember","Microsoft.Graph.Identity.DirectoryManagement","","DELETE /directory/administrativeUnits/{administrativeUnit-id}/scopedRoleMembers/{scopedRoleMembership-id}"
+"New-MsolFederatedDomain","MSOnline","","","",""
+"Get-MsolDirSyncConfiguration","MSOnline","Get-MgDirectoryOnPremisSynchronization","","","GET /directory/onPremisesSynchronization/{onPremisesDirectorySynchronization-id}"
+"New-AzureADServiceAppRoleAssignment","AzureAD","New-MgServicePrincipalAppRoleAssignment","Microsoft.Graph.Applications","Application.Read.All;AppRoleAssignment.ReadWrite.All;Directory.Read.All","POST /servicePrincipals/{servicePrincipal-id}/appRoleAssignments"
+"New-MsolServicePrincipal","MSOnline","New-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /servicePrincipals"
+"New-AzureADMSApplicationKey","AzureAD","Add-MgApplicationKey","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.ReadWrite.All","POST /applications/{application-id}/addKey"
+"Get-AzureADApplicationProxyApplicationConnectorGroup","AzureAD","","","",""
+"Confirm-MsolDomain","MSOnline","Confirm-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains/{domain-id}/verify"
+"Get-AzureADSubscribedSku","AzureAD","Get-MgSubscribedSku","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;Organization.Read.All;Organization.ReadWrite.All","GET /subscribedSkus"
+"Get-AzureADServicePrincipalOwnedObject","AzureAD","Get-MgServicePrincipalOwnedObject","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/ownedObjects"
+"Remove-MsolAdministrativeUnit","MSOnline","Remove-MgDirectoryAdministrativeUnit","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.ReadWrite.All","DELETE /directory/administrativeUnits/{administrativeUnit-id}"
+"Set-AzureADUserExtension","AzureAD","Update-MgUserExtension","Microsoft.Graph.Users","","PATCH /users/{user-id}/extensions/{extension-id}"
+"Remove-AzureADDeviceRegisteredOwner","AzureAD","Remove-MgDeviceRegisteredOwnerByRef","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","DELETE /devices/{device-id}/registeredOwners/{directoryObject-id}/$ref"
+"Get-MsolAdministrativeUnitMember","MSOnline","Get-MgDirectoryAdministrativeUnitMember","Microsoft.Graph.Identity.DirectoryManagement","AdministrativeUnit.Read.All;AdministrativeUnit.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /directory/administrativeUnits/{administrativeUnit-id}/members"
+"Set-AzureADServicePrincipal","AzureAD","Update-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","PATCH /servicePrincipals/{servicePrincipal-id}"
+"Set-AzureADMSIdentityProvider","AzureAD","Update-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.ReadWrite.All","PATCH /identity/identityProviders/{identityProviderBase-id}"
+"New-AzureADApplication","AzureAD","New-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications"
+"New-AzureADMSNamedLocationPolicy","AzureAD","New-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All;Policy.ReadWrite.ConditionalAccess","POST /identity/conditionalAccess/namedLocations"
+"Get-AzureADServicePrincipalCreatedObject","AzureAD","Get-MgServicePrincipalCreatedObject","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/createdObjects"
+"Get-AzureADContactManager","AzureAD","Get-MgContactManager","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Group.Read.All;OrgContact.Read.All","GET /contacts/{orgContact-id}/manager"
+"Get-MsolDirSyncProvisioningError","MSOnline","","","",""
+"Get-AzureADMSApplicationOwner","AzureAD","Get-MgApplicationOwner","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /applications/{application-id}/owners"
+"Set-MsolUser","MSOnline","Update-MgUser","Microsoft.Graph.Users","DeviceManagementApps.ReadWrite.All;DeviceManagementConfiguration.ReadWrite.All;DeviceManagementManagedDevices.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Directory.ReadWrite.All;User.ManageIdentities.All;User.ReadWrite;User.ReadWrite.All","PATCH /users/{user-id}"
+"Set-AzureADDevice","AzureAD","Update-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","PATCH /devices/{device-id}"
+"New-AzureADMSGroupLifecyclePolicy","AzureAD","New-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","POST /groupLifecyclePolicies"
+"Set-AzureADApplicationProxyApplication","AzureAD","","","",""
+"Set-MsolUserPassword","MSOnline","Reset-MgUserAuthenticationMethodPassword","Microsoft.Graph.Users.Actions","UserAuthenticationMethod.ReadWrite.All","POST /users/{user-id}/authentication/methods/{authenticationMethod-id}/resetPassword"
+"Get-AzureADDirectoryRoleTemplate","AzureAD","Get-MgDirectoryRoleTemplate","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /directoryRoleTemplates"
+"Remove-AzureADMSApplicationVerifiedPublisher","AzureAD","Clear-MgApplicationVerifiedPublisher","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /applications/{application-id}/unsetVerifiedPublisher"
+"Set-AzureADMSPermissionGrantConditionSet","AzureAD","Update-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns","","PATCH /policies/permissionGrantPolicies/{permissionGrantPolicy-id}/excludes/{permissionGrantConditionSet-id}"
+"Remove-AzureADOAuth2PermissionGrant","AzureAD","Remove-MgOauth2PermissionGrant","Microsoft.Graph.Identity.SignIns","DelegatedPermissionGrant.ReadWrite.All;Directory.ReadWrite.All","DELETE /oauth2PermissionGrants/{oAuth2PermissionGrant-id}"
+"Remove-AzureADGroupMember","AzureAD","Remove-MgGroupMemberByRef","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All;GroupMember.ReadWrite.All","DELETE /groups/{group-id}/members/{directoryObject-id}/$ref"
+"Get-AzureADApplicationProxyConnectorGroupMember","AzureAD","","","",""
+"Get-AzureADObjectByObjectId","AzureAD","Get-MgDirectoryObjectById","Microsoft.Graph.DirectoryObjects","","POST /directoryObjects/getByIds"
+"Get-AzureADApplication","AzureAD","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All","GET /applications"
+"Disable-MsolDevice","MSOnline","Update-MgDevice","Microsoft.Graph.Identity.DirectoryManagement","Directory.AccessAsUser.All","PATCH /devices/{device-id}"
+"Get-AzureADApplicationProxyConnectorMemberOf","AzureAD","","","",""
+"Get-CrossCloudVerificationCode","AzureAD","Confirm-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains/{domain-id}/verify"
+"Set-MsolDomainAuthentication","MSOnline","New-MgDomainFederationConfiguration","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains/{domain-id}/federationConfiguration"
+"Remove-AzureADUserExtension","AzureAD","Remove-MgUserExtension","Microsoft.Graph.Users","","DELETE /users/{user-id}/extensions/{extension-id}"
+"Add-MsolGroupMember","MSOnline","New-MgGroupMember","Microsoft.Graph.Groups","",""
+"New-AzureADApplicationProxyApplication","AzureAD","","","",""
+"Get-MsolRoleMember","MSOnline","Get-MgDirectoryRoleMember","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /directoryRoles/{directoryRole-id}/members"
+"Set-AzureADTenantDetail","AzureAD","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementConfiguration.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Organization.ReadWrite.All","PATCH /organization/{organization-id}"
+"Set-MsolServicePrincipal","MSOnline","Update-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","PATCH /servicePrincipals/{servicePrincipal-id}"
+"New-AzureADGroup","AzureAD","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","POST /groups"
+"Get-MsolScopedRoleMember","MSOnline","Get-MgDirectoryRoleScopedMember","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /directoryRoles/{directoryRole-id}/scopedMembers"
+"Select-AzureADGroupIdsUserIsMemberOf","AzureAD","Get-MgUserMemberOf","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;GroupMember.Read.All;User.Read","GET /users/{user-id}/memberOf"
+"Set-AzureADApplication","AzureAD","Update-MgApplication","Microsoft.Graph.Applications","Application.ReadWrite.All","PATCH /applications/{application-id}"
+"Remove-AzureADMSGroupLifecyclePolicy","AzureAD","Remove-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.ReadWrite.All","DELETE /groupLifecyclePolicies/{groupLifecyclePolicy-id}"
+"Add-AzureADApplicationOwner","AzureAD","New-MgApplicationOwnerByRef","Microsoft.Graph.Applications","Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","POST /applications/{application-id}/owners/$ref"
+"Set-MsolPartnerInformation","MSOnline","","","",""
+"Get-MsolDeviceRegistrationServicePolicy","MSOnline","Get-MgPolicyDeviceRegistrationPolicy","","Policy.Read.All;Policy.ReadWrite.DeviceConfiguration","GET /policies/deviceRegistrationPolicy"
+"New-AzureADMSPermissionGrantConditionSet","AzureAD","New-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns","Policy.ReadWrite.PermissionGrant","POST /policies/permissionGrantPolicies/{permissionGrantPolicy-id}/excludes"
+"Get-AzureADDeviceRegisteredOwner","AzureAD","Get-MgDeviceRegisteredOwner","Microsoft.Graph.Identity.DirectoryManagement","Device.Read.All;Directory.Read.All;Directory.ReadWrite.All","GET /devices/{device-id}/registeredOwners"
+"New-MsolServicePrincipalAddresses","MSOnline","New-MgServicePrincipal","Microsoft.Graph.Applications","Application.ReadWrite.All","POST /servicePrincipals"
+"Get-AzureADTrustedCertificateAuthority","AzureAD","Get-MgOrganizationCertificateBasedAuthConfiguration","Microsoft.Graph.Identity.SignIns","Organization.Read.All;Organization.ReadWrite.All","GET /organization/{organization-id}/certificateBasedAuthConfiguration"
+"Get-MsolDomain","MSOnline","Get-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Domain.Read.All;Domain.ReadWrite.All","GET /domains"
+"Get-AzureADMSPermissionGrantConditionSet","AzureAD","Get-MgPolicyPermissionGrantPolicyExclude","Microsoft.Graph.Identity.SignIns","Directory.Read.All;Policy.Read.PermissionGrant","GET /policies/permissionGrantPolicies/{permissionGrantPolicy-id}/excludes"
+"New-AzureADUserAppRoleAssignment","AzureAD","New-MgUserAppRoleAssignment","Microsoft.Graph.Applications","AppRoleAssignment.ReadWrite.All","POST /users/{user-id}/appRoleAssignments"
+"Get-AzureADServicePrincipalMembership","AzureAD","Get-MgServicePrincipalTransitiveMemberOf","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/transitiveMemberOf"
+"Remove-MsolContact","MSOnline","Remove-MgContact","Microsoft.Graph.Identity.DirectoryManagement","","DELETE /contacts/{orgContact-id}"
+"Set-MsolDirSyncEnabled","MSOnline","Update-MgOrganization","Microsoft.Graph.Identity.DirectoryManagement","DeviceManagementConfiguration.ReadWrite.All;DeviceManagementServiceConfig.ReadWrite.All;Organization.ReadWrite.All","PATCH /organization/{organization-id}"
+"Get-AzureADDirectoryRole","AzureAD","Get-MgDirectoryRole","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;RoleManagement.Read.Directory;RoleManagement.ReadWrite.Directory","GET /directoryRoles"
+"Set-AzureADApplicationProxyConnectorGroup","AzureAD","","","",""
+"Get-AzureADApplicationPasswordCredential","AzureAD","Get-MgApplication","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All","GET /applications"
+"Get-AzureADServiceAppRoleAssignedTo","AzureAD","Get-MgServicePrincipalAppRoleAssignedTo","Microsoft.Graph.Applications","Application.Read.All;Application.ReadWrite.All;Directory.Read.All;Directory.ReadWrite.All","GET /servicePrincipals/{servicePrincipal-id}/appRoleAssignedTo"
+"New-MsolUser","MSOnline","New-MgUser","Microsoft.Graph.Users","Directory.ReadWrite.All;User.ReadWrite.All","POST /users"
+"Restore-MsolUser","MSOnline","Restore-MgUser","","",""
+"Get-AzureADMSNamedLocationPolicy","AzureAD","Get-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All","GET /identity/conditionalAccess/namedLocations"
+"Get-MsolContact","MSOnline","Get-MgContact","Microsoft.Graph.Identity.DirectoryManagement","Directory.Read.All;Directory.ReadWrite.All;OrgContact.Read.All","GET /contacts"
+"Get-AzureADMSLifecyclePolicyGroup","AzureAD","Get-MgGroupLifecyclePolicy","Microsoft.Graph.Groups","Directory.Read.All;Directory.ReadWrite.All","GET /groupLifecyclePolicies"
+"New-MsolDomain","MSOnline","New-MgDomain","Microsoft.Graph.Identity.DirectoryManagement","Domain.ReadWrite.All","POST /domains"
+"Get-AzureADUser","AzureAD","Get-MgUser","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read.All;User.ReadBasic.All;User.ReadWrite.All","GET /users"
+"Set-AzureADApplicationLogo","AzureAD","Set-MgApplicationLogo","Microsoft.Graph.Applications","Application.ReadWrite.All","PUT /applications/{application-id}/logo"
+"Enable-AzureADDirectoryRole","AzureAD","New-MgDirectoryRoleTemplate","Microsoft.Graph.Identity.DirectoryManagement","","POST /directoryRoleTemplates"
+"Get-AzureADMSIdentityProvider","AzureAD","Get-MgIdentityProvider","Microsoft.Graph.Identity.SignIns","IdentityProvider.Read.All;IdentityProvider.ReadWrite.All","GET /identity/identityProviders"
+"Remove-MsolRoleMember","MSOnline","","","",""
+"New-MsolGroup","MSOnline","New-MgGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","POST /groups"
+"Get-AzureADDomainNameReference","AzureAD","Get-MgDomainDomainNameReferenceByRef","","",""
+"Remove-AzureADMSScopedRoleMembership","AzureAD","Remove-MgUserScopedRoleMemberOf","Microsoft.Graph.Identity.DirectoryManagement","","DELETE /users/{user-id}/scopedRoleMemberOf/{scopedRoleMembership-id}"
+"Reset-AzureADMSLifeCycleGroup","AzureAD","Invoke-MgRenewGroup","Microsoft.Graph.Groups","Directory.ReadWrite.All;Group.ReadWrite.All","POST /groups/{group-id}/renew"
+"Get-MsolUser","MSOnline","Get-MgUser","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read.All;User.ReadBasic.All;User.ReadWrite.All","GET /users"
+"Remove-AzureADMSNamedLocationPolicy","AzureAD","Remove-MgIdentityConditionalAccessNamedLocation","Microsoft.Graph.Identity.SignIns","Policy.Read.All;Policy.ReadWrite.ConditionalAccess","DELETE /identity/conditionalAccess/namedLocations/{namedLocation-id}"
+"Add-AzureADMSServicePrincipalDelegatedPermissionClassification","AzureAD","New-MgServicePrincipalDelegatedPermissionClassification","Microsoft.Graph.Applications","Policy.ReadWrite.PermissionGrant","POST /servicePrincipals/{servicePrincipal-id}/delegatedPermissionClassifications"
+"Redo-MsolProvisionContact","MSOnline","","","",""
+"Revoke-AzureADUserAllRefreshToken","AzureAD","Invoke-MgInvalidateUserRefreshToken","","Directory.ReadWrite.All;User.ReadWrite","POST /users/{user-id}/invalidateAllRefreshTokens"
+"Remove-AzureADApplicationProxyApplicationConnectorGroup","AzureAD","","","",""
+"Get-MsolGroup","MSOnline","Get-MgGroup","Microsoft.Graph.Groups","Directory.Read.All;Directory.ReadWrite.All;Group.Read.All;Group.ReadWrite.All;GroupMember.Read.All","GET /groups"
+"Remove-AzureADMSGroup","AzureAD","Remove-MgGroup","Microsoft.Graph.Groups","Group.ReadWrite.All","DELETE /groups/{group-id}"
+"Get-AzureADUserDirectReport","AzureAD","Get-MgUserDirectReport","Microsoft.Graph.Users","Directory.Read.All;Directory.ReadWrite.All;User.Read;User.Read.All;User.ReadBasic.All;User.ReadWrite.All","GET /users/{user-id}/directReports"

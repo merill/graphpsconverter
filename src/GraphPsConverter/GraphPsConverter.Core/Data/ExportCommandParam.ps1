@@ -55,6 +55,17 @@ $allCmdMapHash.Values | Export-Csv .\CommandMap.csv -NoTypeInformation
 #This command auto-maps the Graph Param to the AAD Param if the same name is found
 #We can later test and manually override them.
 #If Graph Param name is same as AAD Param then map them
-$params | Where-Object {$_.AadParamName -ne ''} | foreach { $key = $_.AadCmdName.ToLower(); if ($allCmdMapHash.ContainsKey($key)) {$_.GraphCmdName = $allCmdMapHash[$key].GraphCmdName; if (  $_.GraphCmdName -ne '' -and (Get-Command $allCmdMapHash[$key].GraphCmdName).Parameters.ContainsKey($_.AadParamName)) { $_.GraphParamName =  $_.AadParamName}  }}
+$params | Where-Object {$_.AadParamName -ne ''} | foreach { 
+	$key = $_.AadCmdName.ToLower(); 
+	if ($allCmdMapHash.ContainsKey($key)) {
+		$_.GraphCmdName = $allCmdMapHash[$key].GraphCmdName; 
+		if ($_.GraphCmdName -ne ''){
+			$graphCmdObj = (Get-Command $_.GraphCmdName -ErrorAction SilentlyContinue)
+			if ($graphCmdObj -ne $null -and $graphCmdObj.Parameters.ContainsKey($_.AadParamName)) { 
+				$_.GraphParamName =  $_.AadParamName
+			}
+		}
+	}
+}
 
 $params | Where-Object {$_.AadParamName -ne ''} | Export-Csv .\ParamMap.csv -NoTypeInformation
