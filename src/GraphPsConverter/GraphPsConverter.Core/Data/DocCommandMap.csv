@@ -28,7 +28,7 @@ Set-AzureADApplicationProxyConnectorGroup,
 Add-AzureADApplicationOwner,New-MgApplicationOwnerByRef
 Get-AzureADApplication,Get-MgApplication
 Get-AzureADApplicationExtensionProperty,Get-MgApplicationExtensionProperty
-Get-AzureADApplicationKeyCredential, Get-MgApplication
+Get-AzureADApplicationKeyCredential,Get-MgApplication
 Get-AzureADApplicationLogo,Get-MgApplicationLogo
 Get-AzureADApplicationOwner,Get-MgApplicationOwner
 Get-AzureADApplicationPasswordCredential,Get-MgApplication
@@ -87,7 +87,7 @@ Remove-AzureADMSPermissionGrantConditionSet,Remove-MgPolicyPermissionGrantPolicy
 Remove-AzureADMSPermissionGrantConditionSet,Remove-MgPolicyPermissionGrantPolicyExclude
 Remove-AzureADMSPermissionGrantPolicy,Remove-MgPolicyPermissionGrantPolicy
 Remove-AzureADMSServicePrincipalDelegatedPermissionClassification,Remove-MgServicePrincipalDelegatedPermissionClassification
-Restore-AzureADMSDeletedDirectoryObject,Restore-MgDirectoryObject
+Restore-AzureADMSDeletedDirectoryObject
 Set-AzureADMSAdministrativeUnit,Update-MgDirectoryAdministrativeUnit
 Set-AzureADMSApplication,Update-MgApplication
 Set-AzureADMSApplicationLogo,Set-MgApplicationLogo
@@ -113,7 +113,7 @@ Remove-AzureADContact,Remove-MgContact
 Remove-AzureADContactManager,Remove-MgContactManagerByRef
 Select-AzureADGroupIdsContactIsMemberOf,Get-MgContactMemberOf
 Get-AzureADContract,Get-MgContract
-Restore-AzureADDeletedApplication,Restore-MgApplication
+Restore-AzureADDeletedApplication,
 Add-AzureADDeviceRegisteredOwner,New-MgDeviceRegisteredOwnerByRef
 Add-AzureADDeviceRegisteredUser,New-MgDeviceRegisteredUserByRef
 Get-AzureADDevice,Get-MgDevice
@@ -232,7 +232,7 @@ Add-MsolScopedRoleMember,New-MgDirectoryRoleScopedMember
 Confirm-MsolDomain,Confirm-MgDomain
 Confirm-MsolEmailVerifiedDomain,
 Connect-MsolService,Connect-MgGraph
-Convert-MsolDomainToFederated, New-MgDomainFederationConfiguration
+Convert-MsolDomainToFederated,New-MgDomainFederationConfiguration
 Convert-MsolDomainToStandard,Remove-MgDomainFederationConfiguration
 Convert-MsolFederatedUser,
 Disable-MsolDevice,Update-MgDevice
@@ -296,7 +296,7 @@ Remove-MsolServicePrincipal,Remove-MgServicePrincipal
 Remove-MsolServicePrincipalCredential,Remove-MgServicePrincipalKey
 Remove-MsolUser,Remove-MgUser
 Reset-MsolStrongAuthenticationMethodByUpn,
-Restore-MsolUser,Restore-MgUser
+Restore-MsolUser
 Set-MsolADFSContext,
 Set-MsolAdministrativeUnit,Update-MgDirectoryAdministrativeUnit
 Set-MsolCompanyAllowedDataLocation,

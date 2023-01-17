@@ -32,7 +32,7 @@ namespace GraphPsConverter.Core.Model
         public string AadCmdDocLink { 
             get 
             {
-                return string.Format("https://docs.microsoft.com/en-us/powershell/module/{0}/{1}", CommandMap.AadModuleName, CommandMap.AadCmdName);
+                return string.Format("https://learn.microsoft.com/en-us/powershell/module/{0}/{1}", CommandMap.AadModuleName, CommandMap.AadCmdName);
             } 
         }
 
@@ -40,8 +40,8 @@ namespace GraphPsConverter.Core.Model
             get
             {
                 return HasGraphCommand 
-                    ? string.Format("https://docs.microsoft.com/en-us/powershell/module/{0}/{1}", CommandMap.GraphModuleName, CommandMap.GraphCmdName) 
-                    : "https://docs.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map";
+                    ? string.Format("https://learn.microsoft.com/en-us/powershell/module/{0}/{1}", CommandMap.GraphModuleName, CommandMap.GraphCmdName) 
+                    : "https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map";
             }
         }
 
